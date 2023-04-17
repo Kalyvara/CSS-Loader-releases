@@ -1,0 +1,7 @@
+:root {
+    --colorTone: linear-gradient(90deg, rgba(0, 0, 0, var(--bgOpacity)), rgba(0, 0, 0, 0)) !important;
+}
+
+.mainmenu_Menu_23IDi {
+    background: var(--colorTone) !important;
+  }
