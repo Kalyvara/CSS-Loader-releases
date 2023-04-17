@@ -1,0 +1,33 @@
+/* main menu background */
+.mainmenu_Menu_23IDi {
+  background: rgba(var(--colorTone), var(--bgOpacity)) !important;
+}
+
+/* item (icon) */
+.mainmenu_ItemIcon_3xZ3Z {
+  color: var(--iconColor);
+}
+/* focused item (icon) */
+.mainmenu_Item_2w9Tp.gpfocus .mainmenu_ItemIcon_3xZ3Z {
+  color: var(--iconColorFocus) !important;
+}
+
+/* item (text) */
+.mainmenu_ItemLabel_3x-ZK {
+  color: var(--textColor);
+}
+/* focused item (text) */
+.mainmenu_Item_2w9Tp.gpfocus .mainmenu_ItemLabel_3x-ZK {
+  color: var(--txtItemFocus) !important;
+}
+
+/* item (active dot) */
+.mainmenu_Item_2w9Tp .mainmenu_ActiveDot_1uLVH {
+  background: rgba(var(--activeColor), 255) !important;
+}
+
+/* focused item (background) */
+.mainmenu_Item_2w9Tp.gpfocus {
+  background: rgba(var(--bgItemFocus), var(--bgItemOpacity)) !important;
+}
+

@@ -1,0 +1,479 @@
+{
+	"name": "CapyMenu (Steam Menu)",
+	"author": "Capybara",
+	"target": "Tweak",
+	"version": "v1.0",
+	"description": "Offers a variety of options and presets to customize the main menu's appearence (triggered by pressing the STEAM button). This includes the possibility to make your own colors and gradients, disabling icons, sliders for backgrounds transparency, among other features.",
+	"manifest_version": 6,
+	"inject": {
+		"shared.css": [
+			"MainMenu"
+		]
+	},
+	"dependencies": {},
+	"patches": {
+		"Remove focus animation": {
+            "type": "checkbox",
+			"default": "No",
+			"values": {
+                "No": {},
+                "Yes": {
+                    "focus_remove.css": ["MainMenu"]
+                }
+            }
+        },
+		"Background menu transparency": {
+            "type": "slider",
+			"default": "0.8",
+            "values": {
+				"O": {
+				  "--bgOpacity": [
+					"0",
+					"MainMenu"
+				  ]
+				},
+				"0.2": {
+				  "--bgOpacity": [
+					"0.2",
+					"MainMenu"
+				  ]
+				},
+				"0.4": {
+				  "--bgOpacity": [
+					"0.4",
+					"MainMenu"
+				  ]
+				},
+				"0.6": {
+					"--bgOpacity": [
+					  "0.6",
+					  "MainMenu"
+					]
+				  },
+				  "0.8": {
+					"--bgOpacity": [
+					  "0.8",
+					  "MainMenu"
+					]
+				  },
+				  "1": {
+					"--bgOpacity": [
+					  "1",
+					  "MainMenu"
+					]
+				  }
+			  }
+        },
+		"Background menu color": {
+			"type": "dropdown",
+			"default": "OLED black (solid) [default]",
+			"values": {
+				"OLED black (solid) [default]": {
+					"--colorTone": [
+					  "0, 0, 0",
+					  "MainMenu"
+					]
+				  },
+				  "Grayish black (solid)": {
+					"--colorTone": [
+					  "17, 17, 17",
+					  "MainMenu"
+					]
+				  },
+				  "White (solid)": {
+					"--colorTone": [
+					  "255, 255, 255",
+					  "MainMenu"
+					]
+				  },
+				  "Black fade out (gradient)": {
+					"presets/menuBackground/fadeout.css": [
+					  "MainMenu"
+					]
+				  },
+				  "Pastel (gradient)": {
+					"presets/menuBackground/pastel.css": [
+					  "MainMenu"
+					]
+				  },
+				  "Carbon (gradient)": {
+					"presets/menuBackground/carbon.css": [
+					  "MainMenu"
+					]
+				  },
+				  "Gold (gradient)": {
+					"presets/menuBackground/gold.css": [
+					  "MainMenu"
+					]
+				  },
+				  "Crimson (gradient)": {
+					"presets/menuBackground/crimson.css": [
+					  "MainMenu"
+					]
+				  },
+				  "Royal blue (gradient)": {
+					"presets/menuBackground/royal_blue.css": [
+					  "MainMenu"
+					]
+				  },
+				  "Bottle green (gradient)": {
+					"presets/menuBackground/bottle_green.css": [
+					  "MainMenu"
+					]
+				  },
+				  "⚙️ Custom... (disables transparency slider)": {
+					"custom_bg_gradient.css": [
+						"MainMenu"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "Gradient color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "gradientColor1",
+					"tabs": [
+						"MainMenu"
+					]
+				},
+				{
+					"name": "Gradient color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "gradientColor2",
+					"tabs": [
+						"MainMenu"
+					]
+				},
+				{
+					"name": "Gradient color 3",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "gradientColor3",
+					"tabs": [
+						"MainMenu"
+					]
+				}
+			]
+		},
+		"Focused item background transparency": {
+            "type": "slider",
+			"default": "0.8",
+            "values": {
+				"O": {
+				  "--bgItemOpacity": [
+					"0",
+					"MainMenu"
+				  ]
+				},
+				"0.4": {
+				  "--bgItemOpacity": [
+					"0.4",
+					"MainMenu"
+				  ]
+				},
+				  "0.8": {
+					"--bgItemOpacity": [
+					  "0.8",
+					  "MainMenu"
+					]
+				  },
+				  "1": {
+					"--bgItemOpacity": [
+					  "1",
+					  "MainMenu"
+					]
+				  }
+			  }
+        },
+		"Focused item background color": {
+			"type": "dropdown",
+			"default": "White (solid) [default]",
+			"values": {
+				"White (solid) [default]": {
+					"--bgItemFocus": [
+					  "255, 255, 255",
+					  "MainMenu"
+					]
+				  },
+				  "Black (solid)": {
+					"--bgItemFocus": [
+					  "0, 0, 0",
+					  "MainMenu"
+					]
+				  },
+				  "White fade out (gradient)": {
+					"presets/focusedItemBackground/fadeout.css": [
+					  "MainMenu"
+					]
+				  },
+				  "Pastel (gradient)": {
+					"presets/focusedItemBackground/pastel_item.css": [
+					  "MainMenu"
+					]
+				  },
+				  "⚙️ Custom... (disables transparency slider)": {
+					"custom_bg_gradient_item.css": [
+						"MainMenu"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "Gradient color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "gradientItemColor1",
+					"tabs": [
+						"MainMenu"
+					]
+				},
+				{
+					"name": "Gradient color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "gradientItemColor2",
+					"tabs": [
+						"MainMenu"
+					]
+				},
+				{
+					"name": "Gradient color 3",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "gradientItemColor3",
+					"tabs": [
+						"MainMenu"
+					]
+				}
+			]
+		},
+		"Text color": {
+			"type": "dropdown",
+			"default": "White [default]",
+			"values": {
+				"White [default]": {
+					"--textColor": [
+						"#fff",
+						"MainMenu"
+					  ]
+				},
+				"Black": {
+					"--textColor": [
+					  "#000",
+					  "MainMenu"
+					]
+				},
+				"⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "Text color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "textColor",
+					"tabs": [
+						"MainMenu"
+					]
+				}
+			]
+		},
+		"Focused text color": {
+		"type": "dropdown",
+		"default": "White [default]",
+		"values": {
+			"White [default]": {
+				"--txtItemFocus": [
+					"#fff",
+					"MainMenu"
+				  ]
+			},
+			"Black": {
+				"--txtItemFocus": [
+				  "#000",
+				  "MainMenu"
+				]
+			},
+			"⚙️ Custom...": {}
+			},
+		"components": [
+			{
+				"name": "Focused text color",
+				"type": "color-picker",
+				"on": "⚙️ Custom...",
+				"default": "#34e8ebFF",
+				"css_variable": "txtItemFocus",
+				"tabs": [
+					"MainMenu"
+				]
+			}
+		]
+		},
+		"Display icons": {
+            "type": "checkbox",
+			"default": "Yes",
+			"values": {
+                "No": {
+					"disable_icons.css": ["MainMenu"]
+				},
+                "Yes": {}
+            }
+        },
+		"Icon color": {
+			"type": "dropdown",
+			"default": "White [default]",
+			"values": {
+				"White [default]": {
+					"--iconColor": [
+						"#fff",
+						"MainMenu"
+					  ]
+				},
+				"Black": {
+					"--iconColor": [
+					  "#000",
+					  "MainMenu"
+					]
+				},
+				"⚙️ Custom...": {
+				}
+				},
+			"components": [
+				{
+					"name": "Icon color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "iconColor",
+					"tabs": [
+						"MainMenu"
+					]
+				}
+			]
+		},
+		"Focused icon color": {
+			"type": "dropdown",
+			"default": "White [default]",
+			"values": {
+				"White [default]": {
+					"--iconColorFocus": [
+					  "#fff",
+					  "MainMenu"
+					]
+				  },
+				  "Black": {
+					"--iconColorFocus": [
+					  "#000",
+					  "MainMenu"
+					]
+				  },
+				  "⚙️ Custom...": {
+				  }
+				},
+			"components": [
+				{
+					"name": "Focused icon color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "iconColorFocus",
+					"tabs": [
+						"MainMenu"
+					]
+				}
+			]
+		},
+		"Display active tab mark": {
+            "type": "checkbox",
+			"default": "Yes",
+			"values": {
+                "No": {
+					"disable_mark.css": ["MainMenu"]
+				},
+                "Yes": {
+                }
+            }
+        },
+		"Tab mark margin": {
+            "type": "checkbox",
+			"default": "No",
+			"values": {
+                "No": {},
+                "Yes": {
+                    "mark_margin.css": ["MainMenu"]
+                }
+            }
+        },
+		"Dot mark": {
+            "type": "checkbox",
+			"default": "No",
+			"values": {
+                "No": {},
+                "Yes": {
+                    "dot_mark.css": ["MainMenu"]
+                }
+            }
+        },
+		"Tab mark color": {
+			"type": "dropdown",
+			"default": "White [default]",
+			"values": {
+				"White [default]": {
+					"--activeColor": [
+						"255, 255, 255",
+						"MainMenu"
+					  ]
+				},
+				"Black": {
+					"--activeColor": [
+					  "0, 0, 0",
+					  "MainMenu"
+					]
+				},
+				"⚙️ Custom...": {
+					"custom_active_mark.css": ["MainMenu"]
+				}
+				},
+			"components": [
+				{
+					"name": "Tab mark color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "gradientMarkColor1",
+					"tabs": [
+						"MainMenu"
+					]
+				},
+				{
+					"name": "Tab mark color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "gradientMarkColor2",
+					"tabs": [
+						"MainMenu"
+					]
+				},
+				{
+					"name": "Tab mark color 3",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "gradientMarkColor3",
+					"tabs": [
+						"MainMenu"
+					]
+				}
+			]
+		}
+	}
+}

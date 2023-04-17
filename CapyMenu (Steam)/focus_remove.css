@@ -1,0 +1,5 @@
+/* focus animation removal (user defined) */
+.mainmenu_Item_2w9Tp.gpfocus {
+  animation: none;
+  transform: none;
+}
