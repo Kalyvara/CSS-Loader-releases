@@ -1,0 +1,5 @@
+/* Credits: SuchMeme (Colored Toggles) */
+:root {
+    --toggleColor: linear-gradient(90deg, rgba(112, 255, 205, 255), rgba(255, 171, 189, 255), rgba(255, 249, 196, 255));
+    --toggleAnimation: gradient 20s ease infinite forwards !important;
+}
