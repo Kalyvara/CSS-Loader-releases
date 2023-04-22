@@ -1,0 +1,1106 @@
+{
+	"name": "CapyMenu (QAM)",
+	"author": "Capybara",
+	"target": "Tweak",
+	"version": "v1.0",
+	"description": "A tool that offers a variety of options as well as pre-configured colors to customize the appearence of the Quick Access Menu (QAM) (triggered by pressing the three dots button). This includes the possibility to set your own colors and gradients for backgrounds, buttons, sliders (via SuchMeme's Colored Toggles) ; or making the tabs rounded, among other features. While I didn't want to clutter the options too much in order to keep this tweak as user-friendly as possible, it still offers a good amount of configuration possibilities, so you might want to make good use of CSS Loader presets feature. Also, SuchMeme & Emerson-Biggons' Pip-Boy and GrodanBool's Outrun themes helped a lot in figuring out some parts of the styling process, in combination with CEF Debugger. The whole QAM has been tweaked almost thoroughly but some sections still lack additional consistency (e.g. Notifications, Friends, Performance) due to tedious and inconvenient testing process. This theme is complementary to my other CapyMenu CSS tweak: https://github.com/Kalyvara/CSS-Loader-releases/tree/main/CapyMenu%20(Steam)",
+	"manifest_version": 6,
+	"inject": {
+		"shared.css": [
+			"QuickAccess"
+		],
+		"friendsTab.css": [
+			"QuickAccess"
+		]
+	},
+	"dependencies": {
+		"Colored Toggles": {}
+	},
+	"patches": {
+		"Bottom border on focused side tab": {
+			"type": "checkbox",
+			"default": "Yes",
+			"values": {
+			  "Yes": {
+				"bottom_border_hl_tab.css": [
+				  "QuickAccess"
+				]
+			  },
+			  "No": {}
+			}
+		},
+		"Additional space between side tabs": {
+			"type": "checkbox",
+			"default": "Yes",
+			"values": {
+			  "Yes": {
+				"tabs_margin.css": [
+				  "QuickAccess"
+				]
+			  },
+			  "No": {}
+			}
+		},
+		"Rounded side tabs": {
+			"type": "checkbox",
+			"default": "No",
+			"values": {
+			  "Yes": {
+				"rounded_icons.css": [
+				  "QuickAccess"
+				]
+			  },
+			  "No": {}
+			}
+		},
+		"Sliders & toggles color": {
+			"type": "dropdown",
+			"default": "Pastel gradient [default]",
+			"values": {
+				"Blue [default]": {
+					"--toggleColor": [
+					  "#2cc9c7",
+					  "QuickAccess"
+					]
+				  },
+				  "Green": {
+					"--toggleColor": [
+					  "#55c96e",
+					  "QuickAccess"
+					]
+				  },
+				  "Yellow": {
+					"--toggleColor": [
+					  "#f2cf5c",
+					  "QuickAccess"
+					]
+				  },
+				  "Red": {
+					"--toggleColor": [
+					  "#c2021e",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--toggleColor": [
+					  "#fff",
+					  "QuickAccess"
+					]
+				  },
+				  "Black": {
+					"--toggleColor": [
+					  "#000",
+					  "QuickAccess"
+					]
+				  },
+				  "Pastel gradient [default]": {
+					"presets/pastel_toggle.css": [
+						"QuickAccess"
+					]
+				  },
+				  "⚙️ Custom...": {
+					"custom_toggle.css": [
+						"QuickAccess"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "Gradient color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "toggleColor1",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "toggleColor2",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 3",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "toggleColor3",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"Notification dot color": {
+			"type": "dropdown",
+			"default": "Green [default]",
+			"values": {
+				"Blue": {
+					"--notif": [
+					  "#2cc9c7",
+					  "QuickAccess"
+					]
+				  },
+				  "Green [default]": {
+					"--notif": [
+					  "#55c96e",
+					  "QuickAccess"
+					]
+				  },
+				  "Yellow": {
+					"--notif": [
+					  "#f2cf5c",
+					  "QuickAccess"
+					]
+				  },
+				  "Red": {
+					"--notif": [
+					  "#c2021e",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--notif": [
+					  "#fff",
+					  "QuickAccess"
+					]
+				  },
+				  "Black": {
+					"--notif": [
+					  "#000",
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "Notif. dot color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "notif",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Main] Background color": {
+			"type": "dropdown",
+			"default": "OLED black [default]",
+			"values": {
+				"OLED black [default]": {
+					"--bgCPanel": [
+					  "0, 0, 0",
+					  "QuickAccess"
+					]
+				  },
+				  "Grayish black": {
+					"--bgCPanel": [
+					  "17, 17, 17",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--bgCPanel": [
+					  "255, 255, 255",
+					  "QuickAccess"
+					]
+				  },
+				  "Pastel gradient": {
+					"presets/mainPanel_pastel.css": [
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom... (disables transparency slider)": {
+					"custom_mainPanel.css": [
+						"QuickAccess"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "Gradient color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "mainGradColor1",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "mainGradColor2",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 3",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "mainGradColor3",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Main] Background opacity": {
+            "type": "slider",
+			"default": "0.8",
+            "values": {
+				"0": {
+				  "--bgCPanelOpacity": [
+					"0",
+					"QuickAccess"
+				  ]
+				},
+				"0.2": {
+				  "--bgCPanelOpacity": [
+					"0.2",
+					"QuickAccess"
+				  ]
+				},
+				"0.4": {
+				  "--bgCPanelOpacity": [
+					"0.4",
+					"QuickAccess"
+				  ]
+				},
+				"0.6": {
+					"--bgCPanelOpacity": [
+					  "0.6",
+					  "QuickAccess"
+					]
+				  },
+				  "0.8": {
+					"--bgCPanelOpacity": [
+					  "0.8",
+					  "QuickAccess"
+					]
+				  },
+				  "1": {
+					"--bgCPanelOpacity": [
+					  "1",
+					  "QuickAccess"
+					]
+				  }
+			  }
+        },
+		"[Main] Text color": {
+			"type": "dropdown",
+			"default": "Gray [default]",
+			"values": {
+				"Gray [default]": {
+					"--mainTextColor": [
+					  "#ccc",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--mainTextColor": [
+						"#fff",
+						"QuickAccess"
+					  ]
+				  },
+				  "Black": {
+					"--mainTextColor": [
+						"#000",
+						"QuickAccess"
+					  ]
+				  },
+				  "⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "[Main] Text color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "mainTextColor",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Main, highlight] Text color": {
+			"type": "dropdown",
+			"default": "White [default]",
+			"values": {
+				"White [default]": {
+					"--hlMainTextColor": [
+					  "#fff",
+					  "QuickAccess"
+					]
+				  },
+				  "Gray": {
+					"--hlMainTextColor": [
+						"#ccc",
+						"QuickAccess"
+					  ]
+				  },
+				  "Black": {
+					"--hlMainTextColor": [
+						"#000",
+						"QuickAccess"
+					  ]
+				  },
+				  "⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "[Main, highlight] Text color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "hlMainTextColor",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Main, highlight] Label background color": {
+			"type": "dropdown",
+			"default": "Grayish black [default]",
+			"values": {
+				"OLED black": {
+					"--hlLabel": [
+					  "0, 0, 0",
+					  "QuickAccess"
+					]
+				  },
+				  "Grayish black [default]": {
+					"--hlLabel": [
+					  "17, 17, 17",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--hlLabel": [
+					  "255, 255, 255",
+					  "QuickAccess"
+					]
+				  },
+				  "Pastel gradient": {
+					"presets/hlLabel_pastel.css": [
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom... (disables transparency slider)": {
+					"custom_hlLabel.css": [
+						"QuickAccess"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "Gradient color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "labelGrad1",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "labelGrad2",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 3",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "labelGrad3",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Main, highlight] Label background opacity": {
+            "type": "slider",
+			"default": "0.8",
+            "values": {
+				"0": {
+				  "--hlLabelOpacity": [
+					"0",
+					"QuickAccess"
+				  ]
+				},
+				"0.2": {
+				  "--hlLabelOpacity": [
+					"0.2",
+					"QuickAccess"
+				  ]
+				},
+				"0.4": {
+				  "--hlLabelOpacity": [
+					"0.4",
+					"QuickAccess"
+				  ]
+				},
+				"0.6": {
+					"--hlLabelOpacity": [
+					  "0.6",
+					  "QuickAccess"
+					]
+				  },
+				  "0.8": {
+					"--hlLabelOpacity": [
+					  "0.8",
+					  "QuickAccess"
+					]
+				  },
+				  "1": {
+					"--hlLabelOpacity": [
+					  "1",
+					  "QuickAccess"
+					]
+				  }
+			  }
+        },
+		"[Main] Separator opacity": {
+            "type": "slider",
+			"default": "0",
+            "values": {
+				"0": {
+				  "--separatorOpacity": [
+					"0",
+					"QuickAccess"
+				  ]
+				},
+				"0.2": {
+				  "--separatorOpacity": [
+					"0.2",
+					"QuickAccess"
+				  ]
+				},
+				"0.4": {
+				  "--separatorOpacity": [
+					"0.4",
+					"QuickAccess"
+				  ]
+				},
+				"0.6": {
+					"--separatorOpacity": [
+					  "0.6",
+					  "QuickAccess"
+					]
+				  },
+				  "0.8": {
+					"--separatorOpacity": [
+					  "0.8",
+					  "QuickAccess"
+					]
+				  },
+				  "1": {
+					"--separatorOpacity": [
+					  "1",
+					  "QuickAccess"
+					]
+				  }
+			  }
+        },
+		"[Main] Separator color": {
+			"type": "dropdown",
+			"default": "Black [default]",
+			"values": {
+				"Black [default]": {
+					"--separatorColor": [
+					  "0, 0, 0",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--separatorColor": [
+					  "255, 255, 255",
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom... (disables transparency slider)": {}
+				},
+			"components": [
+				{
+					"name": "[Main] Separator color",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "separatorColor",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Side] Tabs column color": {
+			"type": "dropdown",
+			"default": "OLED black [default]",
+			"values": {
+				"OLED black [default]": {
+					"--tabsListColor": [
+					  "0, 0, 0",
+					  "QuickAccess"
+					]
+				  },
+				  "Grayish black": {
+					"--tabsListColor": [
+					  "17, 17, 17",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--tabsListColor": [
+					  "255, 255, 255",
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom... (disables transparency slider)": {
+					"custom_colTabs.css": [
+						"QuickAccess"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "Gradient color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "tabsColGrad1",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "tabsColGrad2",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 3",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "tabsColGrad3",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Side] Tabs column opacity": {
+            "type": "slider",
+			"default": "0",
+            "values": {
+				"0": {
+				  "--tabsListOpacity": [
+					"0",
+					"QuickAccess"
+				  ]
+				},
+				"0.2": {
+				  "--tabsListOpacity": [
+					"0.2",
+					"QuickAccess"
+				  ]
+				},
+				"0.4": {
+				  "--tabsListOpacity": [
+					"0.4",
+					"QuickAccess"
+				  ]
+				},
+				"0.6": {
+					"--tabsListOpacity": [
+					  "0.6",
+					  "QuickAccess"
+					]
+				  },
+				  "0.8": {
+					"--tabsListOpacity": [
+					  "0.8",
+					  "QuickAccess"
+					]
+				  },
+				  "1": {
+					"--tabsListOpacity": [
+					  "1",
+					  "QuickAccess"
+					]
+				  }
+			  }
+        },
+		"[Side] Tab background color": {
+			"type": "dropdown",
+			"default": "OLED black [default]",
+			"values": {
+				"OLED black [default]": {
+					"--tabsColor": [
+					  "0, 0, 0",
+					  "QuickAccess"
+					]
+				  },
+				  "Grayish black": {
+					"--tabsColor": [
+					  "17, 17, 17",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--tabsColor": [
+					  "255, 255, 255",
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom... (disables transparency slider)": {
+					"custom_bgTabs.css": [
+						"QuickAccess"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "Gradient color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "bgTabsGrad1",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "bgTabsGrad2",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 3",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables transparency slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "bgTabsGrad3",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Side] Tab background opacity": {
+            "type": "slider",
+			"default": "0.8",
+            "values": {
+				"0": {
+				  "--tabsOpacity": [
+					"0",
+					"QuickAccess"
+				  ]
+				},
+				"0.2": {
+				  "--tabsOpacity": [
+					"0.2",
+					"QuickAccess"
+				  ]
+				},
+				"0.4": {
+				  "--tabsOpacity": [
+					"0.4",
+					"QuickAccess"
+				  ]
+				},
+				"0.6": {
+					"--tabsOpacity": [
+					  "0.6",
+					  "QuickAccess"
+					]
+				  },
+				  "0.8": {
+					"--tabsOpacity": [
+					  "0.8",
+					  "QuickAccess"
+					]
+				  },
+				  "1": {
+					"--tabsOpacity": [
+					  "1",
+					  "QuickAccess"
+					]
+				  }
+			  }
+        },
+		"[Side] Tab icon color": {
+			"type": "dropdown",
+			"default": "White [default]",
+			"values": {
+				"White [default]": {
+					"--tabIcon": [
+					  "#fff",
+					  "QuickAccess"
+					]
+				  },
+				  "Grayish black": {
+					"--tabIcon": [
+					  "#171717",
+					  "QuickAccess"
+					]
+				  },
+				  "Black": {
+					"--tabIcon": [
+					  "#000",
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "[Side] Tab icon color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "tabIcon",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Side, highlight] Tab background color": {
+			"type": "dropdown",
+			"default": "Grayish black [default]",
+			"values": {
+				"OLED black": {
+					"--hlTabColor": [
+					  "0, 0, 0",
+					  "QuickAccess"
+					]
+				  },
+				  "Grayish black [default]": {
+					"--hlTabColor": [
+					  "17, 17, 17",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--hlTabColor": [
+					  "255, 255, 255",
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom...": {
+					"custom_hlBgTabs.css": [
+						"QuickAccess"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "Gradient color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "hlBgTabsGrad1",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "hlBgTabsGrad2",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 3",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "hlBgTabsGrad3",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Side, highlight] Tab icon color": {
+			"type": "dropdown",
+			"default": "White [default]",
+			"values": {
+				"White [default]": {
+					"--hlTabIcon": [
+					  "#fff",
+					  "QuickAccess"
+					]
+				  },
+				  "Grayish black": {
+					"--hlTabIcon": [
+					  "#171717",
+					  "QuickAccess"
+					]
+				  },
+				  "Black": {
+					"--hlTabIcon": [
+					  "#000",
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "[Side, highlight] Tab icon color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "hlTabIcon",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Buttons] Background color": {
+			"type": "dropdown",
+			"default": "Grayish black [default]",
+			"values": {
+				"OLED black": {
+					"--ddb": [
+					  "#000",
+					  "QuickAccess"
+					]
+				  },
+				  "Grayish black [default]": {
+					"--ddb": [
+					  "#171717",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--ddb": [
+					  "#fff",
+					  "QuickAccess"
+					]
+				  },
+				  "Pastel gradient": {
+					"presets/buttons_pastel.css": [
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom...": {
+					"custom_buttons.css": [
+						"QuickAccess"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "Gradient color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "buttonsGrad1",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "buttonsGrad2",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 3",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "buttonsGrad3",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Buttons] Text color": {
+			"type": "dropdown",
+			"default": "Gray [default]",
+			"values": {
+				"Gray [default]": {
+					"--ddbText": [
+					  "#ccc",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--ddbText": [
+					  "#fff",
+					  "QuickAccess"
+					]
+				  },
+				  "Black": {
+					"--ddbText": [
+					  "#000",
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "[Buttons] Text color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "ddbText",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Buttons, highlight] Background color": {
+			"type": "dropdown",
+			"default": "White [default]",
+			"values": {
+				"White [default]": {
+					"--hlDdb": [
+					  "#fff",
+					  "QuickAccess"
+					]
+				  },
+				"OLED black": {
+					"--hlDdb": [
+					  "#000",
+					  "QuickAccess"
+					]
+				  },
+				  "Grayish black": {
+					"--hlDdb": [
+					  "#171717",
+					  "QuickAccess"
+					]
+				  },
+				  "Pastel gradient": {
+					"presets/hlButtons_pastel.css": [
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom...": {
+					"custom_hlButtons.css": [
+						"QuickAccess"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "Gradient color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "hlButtonsGrad1",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "hlButtonsGrad2",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+				{
+					"name": "Gradient color 3",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "hlButtonsGrad3",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+		"[Buttons, highlight] Text color": {
+			"type": "dropdown",
+			"default": "Black [default]",
+			"values": {
+				"Black [default]": {
+					"--hlDdbText": [
+					  "#000",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--hlDdbText": [
+					  "#fff",
+					  "QuickAccess"
+					]
+				  },
+				  "Gray": {
+					"--hlDdbText": [
+					  "#ccc",
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "[Buttons, highlight] Text color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "hlDdbText",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		}
+	}
+}
