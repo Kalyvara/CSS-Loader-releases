@@ -1,0 +1,7 @@
+:root {
+    --tabsListColor: linear-gradient(45deg, var(--tabsColGrad1), var(--tabsColGrad2), var(--tabsColGrad3));
+}
+
+.quickaccessmenu_Tabs_3Ag1w {
+    background: var(--tabsListColor) !important;
+}

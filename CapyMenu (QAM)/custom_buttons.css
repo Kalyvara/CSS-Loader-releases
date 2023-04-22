@@ -1,0 +1,3 @@
+:root {
+    --ddb: linear-gradient(180deg, var(--buttonsGrad1), var(--buttonsGrad2), var(--buttonsGrad3)) !important;
+}

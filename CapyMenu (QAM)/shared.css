@@ -1,0 +1,284 @@
+/* ---
+Colored Toggles overrides
+--- */
+:root {
+    --colored-toggles-main-color: var(--toggleColor) !important;
+    --colored-toggles-static-color: var(--toggleColor) !important;
+    --colored-toggles-friends-text-color: #fff !important;
+    --toggleAnimation: none;
+}
+
+/* adds shadow to text to limit possible readability issues for user-defined colors */
+.appdetailsfriendssection_FriendsPlayingNowBadge_38sNQ.appdetailsfriendssection_InFriendsTab_15Vpl, .appportrait_AppPortraitBanner_N8aJr { /* applies to friends badge and new to library texts */
+	text-shadow: 0px 0px 3px #000;
+}
+
+/* ---
+Whole QAM panel
+--- */
+.quickaccessmenu_QuickAccessMenu_V0cr- {
+    background: none;
+}
+
+/* ---
+Tabs list
+--- */
+
+/* Tabs column */
+.quickaccessmenu_Tabs_3Ag1w {
+    background: rgba(var(--tabsListColor), var(--tabsListOpacity));
+}
+
+/* Tabs background */
+.quickaccessmenu_Tab_1S76C {
+    background: rgba(var(--tabsColor), var(--tabsOpacity));
+}
+
+/* Tabs background (highlight, focus) */
+.quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu, .quickaccessmenu_Tab_1S76C.gpfocus.gpfocuswithin {
+    background: rgba(var(--hlTabColor), 255) !important;
+    animation: none;
+}
+
+/* Tabs icon */
+.quickaccessmenu_Tab_1S76C svg {
+    color: var(--tabIcon);
+}
+
+/* Tabs icon (highlight, focus) */
+.gpfocus.quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu::before /* highlight */, .gpfocus.quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu svg /* focus */ {
+    color: var(--hlTabIcon);
+}
+
+/* Same thing for keyboard button that appears in-game */
+.quickaccessmenu_KeyboardButton_1RN_U {
+    background: rgba(var(--tabsColor), var(--tabsOpacity));
+}
+.quickaccessmenu_KeyboardButton_1RN_U svg {
+    color: var(--tabIcon);
+}
+.quickaccessmenu_KeyboardButton_1RN_U.gpfocus.gpfocuswithin {
+    background: rgba(var(--hlTabColor), 255);
+}
+.quickaccessmenu_KeyboardButton_1RN_U.gpfocus.gpfocuswithin svg {
+    color: var(--hlTabIcon);
+}
+
+/* Notifications */
+
+/* .quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications .notificationcontent_StandardTemplate_5HZT7 {} */
+
+/* No new notifications text */
+.quickaccesscontrols_EmptyNotifications_1g1_n {
+    color: var(--mainTextColor);
+    filter: opacity(0.6);
+}
+
+.quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications.gpfocuswithin .notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin {
+    background: rgba(var(--hlLabel), var(--hlLabelOpacity));
+}
+
+/* Achievements */
+.quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications .notificationcontent_StandardTemplate_5HZT7 .notificationcontent_AchievementBody_2iHCs .appdetailsachievementssection_Achieved_MGoYU .appdetailsachievementssection_TextSection_1s_9c /* achievement title, no highlight */ {
+    color: var(--mainTextColor);
+}
+.quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications .notificationcontent_StandardTemplate_5HZT7 .notificationcontent_AchievementBody_2iHCs .appdetailsachievementssection_Achieved_MGoYU .appdetailsachievementssection_Desc_2gLHb /* achievement description, no highlight */ {
+    color: var(--mainTextColor);
+    filter: opacity(0.6);
+}
+
+.quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications.gpfocuswithin .notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .notificationcontent_AchievementBody_2iHCs .appdetailsachievementssection_Achieved_MGoYU .appdetailsachievementssection_TextSection_1s_9c /* achievement title, highlight */ {
+    color: var(--hlMainTextColor);
+}
+.quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications.gpfocuswithin .notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .notificationcontent_AchievementBody_2iHCs .appdetailsachievementssection_Achieved_MGoYU .appdetailsachievementssection_Desc_2gLHb /* achievement description, highlight */ {
+    color: var(--hlMainTextColor);
+    filter: opacity(0.6);
+}
+
+/* Friends status notification container, highlight */
+.notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin {
+    background: rgba(var(--hlLabel), var(--hlLabelOpacity)) !important;
+}
+
+/* Icon, friends status, username texts */
+.notificationcontent_Header_1KnyC .notificationcontent_Title_3qzN6,
+.notificationcontent_Header_1KnyC .notificationcontent_Icon_opgc6 svg,
+
+.notificationcontent_StandardTemplate_5HZT7 .notificationcontent_StandardNotificationDescription_zB56A {
+    color: var(--mainTextColor);
+}
+
+/* "Playing" text */
+.notificationcontent_Body_2RpDR .notificationcontent_StandardNotificationSubText_EVwRp {
+    color: var(--mainTextColor);
+    filter: opacity(0.8);
+}
+
+/* Current friend's game text */
+.notificationcontent_Body_2RpDR .notificationcontent_StandardNotificationSubText_EVwRp .notificationcontent_FriendInGameAppColor_3uw_G {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Timestamp, timestamp highlight */
+.notificationcontent_Header_1KnyC .notificationcontent_Timestamp_3q7nN {
+    color: var(--mainTextColor);
+    filter: opacity(0.6);
+}
+.notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .notificationcontent_Header_1KnyC .notificationcontent_Timestamp_3q7nN {
+    color: var(--hlMainTextColor);
+}
+
+/* Username, playing texts highlight */
+.notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .notificationcontent_StandardNotificationSubText_EVwRp,
+.notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .notificationcontent_StandardNotificationDescription_zB56A
+{
+    color: var(--hlMainTextColor);
+}
+
+/* Notif title & icon, highlight */
+.notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .notificationcontent_Header_1KnyC .notificationcontent_Title_3qzN6,
+.notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .notificationcontent_Header_1KnyC .notificationcontent_Icon_opgc6 svg {
+    color: var(--hlMainTextColor);
+}
+
+/* ---
+Main panel
+--- */
+
+/* Main panel on the right */
+.quickaccessmenu_PanelOuterNav_2BB6u {
+    background: rgba(var(--bgCPanel), var(--bgCPanelOpacity));
+}
+
+/* Background and shadow removal for titles */
+.quickaccessmenu_Title_34nl5 {
+    background: none;
+    box-shadow: none;
+}
+/* Same thing for remote play section */
+.remoteplay_QuickAccessContainer_3Moue .remoteplay_QuickAccessTitle_2dcwM {
+    background: none;
+    box-shadow: none;
+}
+
+/* Separator between labels */
+.gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorStandard_3s1Rk::after {
+    background: rgba(var(--separatorColor), var(--separatorOpacity));
+}
+
+/* Label in main panel */
+.gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocus, 
+.gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin {
+    background: rgba(var(--hlLabel), var(--hlLabelOpacity));
+    animation: none;
+}
+
+/* Text in main panel */
+.quickaccesscontrols_Text_1hJkB, 
+.quickaccessmenu_Title_34nl5, 
+.gamepaddialog_FieldLabel_3b0U-, 
+.perf_Text_3gY4m,
+.quickaccesscontrols_BatteryPercentageLabel_3Rxxi,
+.gamepadslider_Icon_21uKi
+{
+    color: var(--mainTextColor);
+}
+
+/* Label description */
+.gamepaddialog_Field_S-_La .gamepaddialog_FieldDescription_2OJfk
+{
+    color: var(--mainTextColor);
+    filter: opacity(0.6);
+}
+
+/* Text in main panel (highlight) */
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepaddialog_FieldLabel_3b0U-, 
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepaddialog_FieldDescription_2OJfk,
+.gamepaddialog_Field_S-_La.gpfocuswithin .perf_Text_3gY4m,
+.gamepaddialog_Field_S-_La.gpfocuswithin .quickaccesscontrols_BatteryProjectedValue_1mTo6,
+.gamepaddialog_Field_S-_La.gpfocuswithin .quickaccesscontrols_BatteryProjectedLabel_4hS40,
+.gamepaddialog_Field_S-_La.gpfocuswithin .quickaccesscontrols_BatteryPercentageLabel_3Rxxi,
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepadslider_Icon_21uKi
+{
+    color: var(--hlMainTextColor) !important;
+}
+
+/* ---
+Buttons, sliders, toggles, etc.
+--- */
+
+/* Dropdown button */
+.gamepaddialog_Button_1kn70 {
+    background: var(--ddb) !important;
+    color: var(--ddbText) !important;
+}
+
+/* Dropdown button (highlight) */
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepaddropdown_DropDownControlButton_28bny,
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepaddialog_Button_1kn70
+{
+    background: var(--hlDdb) !important;
+    color: var(--hlDdbText) !important;
+}
+
+/* Slider tick text */
+.gamepadslider_SliderNotch_3x6ve {
+    color: var(--mainTextColor);
+    filter: opacity(0.6);
+}
+/* Slider tick text (highlight) */
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepadslider_SliderNotch_3x6ve {
+    color: var(--hlMainTextColor);
+}
+
+/*
+Slider filled area and active ticks colors are defined via Colored Toggles
+
+.gamepaddialog_Field_S-_La .gamepadslider_SliderTrack_Mq25N::before {
+    background: red;
+}
+*/
+
+/* Slider empty area and inactive ticks */
+.gamepaddialog_Field_S-_La .gamepadslider_SliderTrack_Mq25N, .gamepaddialog_Field_S-_La .gamepadslider_SliderNotchTick_Fv1Ht {
+    background: rgba(255, 255, 255, 0.2);
+    filter: brightness(0.9);
+}
+
+/* Slider and ticks (highlight) */
+.gamepaddialog_Field_S-_La.gpfocuswithin .gamepadslider_SliderTrack_Mq25N, .gamepaddialog_Field_S-_La.gpfocuswithin .gamepadslider_SliderNotchTick_Fv1Ht {
+    filter: brightness(0.6);
+}
+
+/* Notification dot */
+div[style="position: absolute; top: -5px; right: -5px; height: 10px; width: 10px; background: orange; border-radius: 50%;"], div[style="position: absolute; top: 8px; right: 8px; height: 10px; width: 10px; background: orange; border-radius: 50%;"] {
+    background: var(--notif) !important;
+}
+
+/* ---
+Misc
+--- */
+
+/* Performance profile text */
+.perf_PerfProfileInfoBasic_1nXii {
+    color: var(--mainTextColor);
+}
+
+/* Decky button */
+.quickaccessmenu_Title_34nl5 .gamepaddialog_Button_1kn70
+{
+    background: var(--ddb) !important;
+    color: var(--ddbText) !important;
+}
+/* Decky button (highlight) */
+.quickaccessmenu_Title_34nl5 .gpfocuswithin.gamepaddialog_Button_1kn70
+{
+    background: var(--hlDdb) !important;
+    color: var(--hlDdbText) !important;
+}
+
+/* Battery icon outline
+div[style="height: fit-content; display: flex; color: rgb(255, 255, 255);"] {
+    color: black !important;
+} */
+

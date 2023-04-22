@@ -1,0 +1,7 @@
+:root {
+    --bgCPanel: linear-gradient(110deg, var(--mainGradColor1), var(--mainGradColor2), var(--mainGradColor3)) !important;
+}
+
+.quickaccessmenu_PanelOuterNav_2BB6u {
+    background: var(--bgCPanel) !important;
+}

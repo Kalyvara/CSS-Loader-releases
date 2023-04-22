@@ -1,0 +1,3 @@
+:root {
+    --hlDdb: linear-gradient(180deg, var(--hlButtonsGrad1), var(--hlButtonsGrad2), var(--hlButtonsGrad3)) !important;
+}
