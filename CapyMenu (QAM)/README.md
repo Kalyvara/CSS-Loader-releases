@@ -10,3 +10,5 @@ Please note that this theme conflicts with EMERALD's [Obsidian](https://deckthem
 ## Dependencies
 
 - [Colored Toggles](https://deckthemes.com/themes/view?themeId=d08de13f-2ef5-4d83-8b41-bbb325b3c5e1)
+
+## [Download](https://deckthemes.com/themes/view?themeId=726ddfcd-47a0-4f71-81ac-c276936c68cb)
