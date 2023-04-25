@@ -3,7 +3,7 @@
 	"author": "Capybara",
 	"target": "Tweak",
 	"version": "v1.0",
-	"description": "A little tweak that adds customization options and color presets for context/options menus. This tweak notably adds animations on highlighted items and Play buttons, and also a gray background filter. All of these can be disabled to your convenience.",
+	"description": "A little tweak that adds customization options and color presets for context/options menus. This tweak notably adds animations on highlighted items and Play buttons, and also a gray background filter. These can be disabled to your convenience.",
 	"manifest_version": 6,
 	"inject": {
 		"shared.css": [
