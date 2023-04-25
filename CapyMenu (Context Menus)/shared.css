@@ -1,0 +1,116 @@
+:root {
+    --cmItemTxtScale: txtScale .05s linear 1 forwards;
+    --animPlayButton: gradient 5s ease infinite forwards;
+    --animPlayButtonHl: gradient 3s ease infinite forwards;
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+      background-size: 300% 300%;
+    }
+    50% {
+      background-position: 100% 50%;
+      background-size: 300% 300%;
+    }
+    100% {
+      background-position: 0% 50%;
+      background-size: 300% 300%;
+    }
+  }
+
+@keyframes txtScale {
+    0% { font-size: 1em; }
+    100% { font-size: 1.1em; }
+}
+
+/* Context menu item */
+.gamepadcontextmenu_contextMenuItem_1sdvo.contextMenuItem {
+    background: var(--cmBgColor);
+    color: var(--cmTxtColor);
+}
+/* Context menu item, highlight */
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gpfocus.gpfocuswithin {
+    background: var(--cmHlBgColor);
+    color: var(--cmHlTxtColor);
+    animation: var(--cmItemTxtScale);
+}
+/* Focused submenu item */
+.gamepadcontextmenu_SubMenu_1_tPN.gamepadcontextmenu_active_2Pk-x.gamepadcontextmenu_contextMenuItem_1sdvo {
+    background: var(--cmHlBgColor);
+    color: var(--cmHlTxtColor);
+    font-size: 1.1em;
+}
+/* Context menu disabled item */
+.contextmenu_UpperCase_2ZwZj.gamepadcontextmenu_contextMenuItem_1sdvo.contextMenuItem.disabled {
+    color: var(--cmTxtColor);
+    filter: opacity(0.6);
+}
+
+/* "Destructive" item on highlight (e.g. Power > Shutdown, Restart, Change Account, Exit Steam) */
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Destructive_3aIFv.gamepadcontextmenu_Focused_X813r.gpfocus.gpfocuswithin {
+    background: #990f32;
+    color: #fff;
+}
+
+/* Rounded arrows
+.gamepadcontextmenu_SubMenu_1_tPN.gamepadcontextmenu_contextMenuItem_1sdvo.contextMenuItem .gamepadcontextmenu_Arrow_2EDBb {
+    background: red;
+    border-radius: 12px;
+}
+*/
+
+/* Arrow */
+.gamepadcontextmenu_SubMenu_1_tPN.gamepadcontextmenu_contextMenuItem_1sdvo.contextMenuItem .gamepadcontextmenu_Arrow_2EDBb svg {
+    fill: var(--cmTxtColor);
+}
+
+/* Arrow, highlight, focused */
+.gamepadcontextmenu_SubMenu_1_tPN.gamepadcontextmenu_contextMenuItem_1sdvo.contextMenuItem.gamepadcontextmenu_Focused_X813r .gamepadcontextmenu_Arrow_2EDBb svg,
+.gamepadcontextmenu_SubMenu_1_tPN.gamepadcontextmenu_active_2Pk-x.gamepadcontextmenu_contextMenuItem_1sdvo .gamepadcontextmenu_Arrow_2EDBb svg {
+    fill: var(--cmHlTxtColor);
+}
+
+/* "+" */
+.gamepadcontextmenu_contextMenuItem_1sdvo .SVGIcon_PlusCircle line {
+    stroke: var(--cmTxtColor);
+}
+/* "+", highlight, focused */
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gpfocus.gpfocuswithin .SVGIcon_PlusCircle line {
+    stroke: var(--cmHlTxtColor);
+}
+
+/* Play button */
+.Play.gamepadcontextmenu_contextMenuItem_1sdvo {
+    background: linear-gradient(110deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+    animation: var(--animPlayButton);
+    color: #fff;
+    font-weight: bold;
+}
+/* Play button, highlight */
+.Play.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gpfocus.gpfocuswithin {
+    background: var(--cmPlayButtonColor);
+    color: var(--cmTxtPlayButton);
+    animation: var(--animPlayButtonHl);
+    text-shadow: 0 0 12px #171717a4;
+}
+/* Play button, icon */
+.Play.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gpfocus.gpfocuswithin svg {
+    color: var(--cmTxtPlayButton);
+    filter: drop-shadow(0px 0px 6px #171717a4) !important;
+}
+
+
+
+/*
+@keyframes txtShadow {
+    0% { text-shadow: none; }
+    50% { text-shadow: 0px 0px 12px #171717a4; }
+    100% { text-shadow: none; }
+}
+@keyframes svgShadow {
+    0% { filter: drop-shadow(0 0 0 #171717a4) }
+    50% { filter: drop-shadow(0 0 12px #171717a4) }
+    100% { filter: drop-shadow(0 0 0 #171717a4) }
+}
+*/

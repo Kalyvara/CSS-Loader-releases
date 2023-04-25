@@ -1,0 +1,5 @@
+/* Modal overlay background */
+.gamepadui_GamepadDialogOverlay_34Euf .ModalOverlayBackground {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.144), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(12px) grayscale(1);
+}

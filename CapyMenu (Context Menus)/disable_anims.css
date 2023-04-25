@@ -1,0 +1,16 @@
+/* Context menu item, highlight */
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gpfocus.gpfocuswithin {
+    animation: none !important;
+}
+/* Play button */
+.Play.gamepadcontextmenu_contextMenuItem_1sdvo {
+    animation: none !important;
+}
+/* Play button, highlight */
+.Play.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gpfocus.gpfocuswithin {
+    animation: none !important;
+}
+/* Game screen, play button, highlight */
+.BasicUI .appactionbutton_Green_3cI5T .appactionbutton_ButtonChild_2AzIX.Focusable:focus {
+    animation: none !important;
+}

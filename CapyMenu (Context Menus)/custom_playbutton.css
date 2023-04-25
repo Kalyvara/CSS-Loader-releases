@@ -1,0 +1,7 @@
+:root {
+    --cmPlayButtonColor: linear-gradient(120deg, var(--playGradColor1), var(--playGradColor2), var(--playGradColor3), var(--playGradColor4));
+}
+
+.Play.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gpfocus.gpfocuswithin {
+    background: var(--cmPlayButtonColor);
+}

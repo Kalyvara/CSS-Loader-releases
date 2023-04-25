@@ -1,0 +1,369 @@
+{
+	"name": "CapyMenu (Context Menus)",
+	"author": "Capybara",
+	"target": "Tweak",
+	"version": "v1.0",
+	"description": "A little tweak that adds customization options and color presets for context/options menus. This tweak notably adds animations on highlighted items and Play buttons, and also a gray background filter. All of these can be disabled to your convenience.",
+	"manifest_version": 6,
+	"inject": {
+		"shared.css": [
+			"SP", "MainMenu"
+		]
+	},
+	"dependencies": {},
+	"patches": {
+		"Disable animations": {
+			"type": "checkbox",
+			"default": "No",
+			"values": {
+			  "Yes": {
+				"disable_anims.css": [
+				  "SP"
+				]
+			  },
+			  "No": {}
+			}
+		},
+		"Centered text": {
+			"type": "checkbox",
+			"default": "Yes",
+			"values": {
+			  "Yes": {
+				"center_text.css": [
+				  "SP"
+				]
+			  },
+			  "No": {}
+			}
+		},
+		"Remove separators": {
+			"type": "checkbox",
+			"default": "Yes",
+			"values": {
+			  "Yes": {
+				"remove_separator.css": [
+				  "SP"
+				]
+			  },
+			  "No": {}
+			}
+		},
+		"Background gray filter": {
+			"type": "checkbox",
+			"default": "Yes",
+			"values": {
+			  "Yes": {
+				"bg_gray_filter.css": [
+				  "SP"
+				]
+			  },
+			  "No": {}
+			}
+		},
+		"[Item] Background color": {
+			"type": "dropdown",
+			"default": "Grayish black [default]",
+			"values": {
+				"Grayish black [default]": {
+					"--cmBgColor": [
+					  "#171717",
+					  "SP"
+					]
+				  },
+				  "OLED black": {
+					"--cmBgColor": [
+					  "#000",
+					  "SP"
+					]
+				  },
+				  "White": {
+					"--cmBgColor": [
+					  "#fff",
+					  "SP"
+					]
+				  },
+                  "⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "[Item] Background color]",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "cmBgColor",
+					"tabs": [
+						"SP"
+					]
+				}
+			]
+		},
+        "[Item] Text color": {
+			"type": "dropdown",
+			"default": "Grayish white [default]",
+			"values": {
+				"Grayish white [default]": {
+					"--cmTxtColor": [
+					  "#eee",
+					  "SP"
+					]
+				  },
+				  "White": {
+					"--cmTxtColor": [
+					  "#fff",
+					  "SP"
+					]
+				  },
+				  "Black": {
+					"--cmTxtColor": [
+					  "#000",
+					  "SP"
+					]
+				  },
+				  "⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "Text color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "cmTxtColor",
+					"tabs": [
+						"SP"
+					]
+				}
+			]
+		},
+		"[Item, highlight] Background color": {
+			"type": "dropdown",
+			"default": "Grayish black [default]",
+			"values": {
+				"Grayish black [default]": {
+					"--cmHlBgColor": [
+					  "#222222",
+					  "SP"
+					]
+				  },
+				  "OLED black": {
+					"--cmHlBgColor": [
+					  "#000",
+					  "SP"
+					]
+				  },
+				  "White": {
+					"--cmHlBgColor": [
+					  "#fff",
+					  "SP"
+					]
+				  },
+                  "⚙️ Custom...": {
+					"custom_hlItem.css": [
+						"SP"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "Gradient color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "cmHlItemGradColor1",
+					"tabs": [
+						"SP"
+					]
+				},
+				{
+					"name": "Gradient color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "cmHlItemGradColor2",
+					"tabs": [
+						"SP"
+					]
+				}
+			]
+		},
+		"[Item, highlight] Text color": {
+			"type": "dropdown",
+			"default": "White [default]",
+			"values": {
+				"White [default]": {
+					"--cmHlTxtColor": [
+					  "#fff",
+					  "SP"
+					]
+				  },
+				"Grayish white": {
+					"--cmHlTxtColor": [
+					  "#eee",
+					  "SP"
+					]
+				  },
+				  "Black": {
+					"--cmHlTxtColor": [
+					  "#000",
+					  "SP"
+					]
+				  },
+				  "⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "Text color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "cmHlTxtColor",
+					"tabs": [
+						"SP"
+					]
+				}
+			]
+		},
+		"Apply Play button's color scheme to game screen": {
+			"type": "checkbox",
+			"default": "Yes",
+			"values": {
+			  "Yes": {
+				"playbutton_gamescreen.css": [
+				  "SP"
+				]
+			  },
+			  "No": {}
+			}
+		},
+		"[Play button, highlight] Background color": {
+			"type": "dropdown",
+			"default": "Pastel gradient [default]",
+			"values": {
+				"Pastel gradient [default]": {
+					"presets/pastel_playbutton.css": [
+					  "SP"
+					]
+				  },
+				  "Green": {
+					"--cmPlayButtonColor": [
+					  "#50b566",
+					  "SP"
+					]
+				  },
+				  "Blue": {
+					"--cmPlayButtonColor": [
+					  "#4dadb8",
+					  "SP"
+					]
+				  },  
+				  "Red": {
+					"--cmPlayButtonColor": [
+					  "#941828",
+					  "SP"
+					]
+				  },  
+				"Grayish black": {
+					"--cmPlayButtonColor": [
+					  "#222222",
+					  "SP"
+					]
+				  },
+				  "OLED black": {
+					"--cmPlayButtonColor": [
+					  "#000",
+					  "SP"
+					]
+				  },
+				  "White": {
+					"--cmPlayButtonColor": [
+					  "#fff",
+					  "SP"
+					]
+				  },
+                  "⚙️ Custom...": {
+					"custom_playbutton.css": [
+					  "SP"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "Gradient color 1",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "playGradColor1",
+					"tabs": [
+						"SP"
+					]
+				},
+				{
+					"name": "Gradient color 2",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "playGradColor2",
+					"tabs": [
+						"SP"
+					]
+				},
+				{
+					"name": "Gradient color 3",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "playGradColor3",
+					"tabs": [
+						"SP"
+					]
+				},
+				{
+					"name": "Gradient color 4",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "playGradColor4",
+					"tabs": [
+						"SP"
+					]
+				}
+			]
+		},
+		"[Play button, highlight] Text color": {
+			"type": "dropdown",
+			"default": "White [default]",
+			"values": {
+				"White [default]": {
+					"--cmTxtPlayButton": [
+					  "#fff",
+					  "SP"
+					]
+				  },
+				  "Grayish white": {
+					"--cmTxtPlayButton": [
+					  "#eee",
+					  "SP"
+					]
+				  },
+				  "Black": {
+					"--cmTxtPlayButton": [
+					  "#000",
+					  "SP"
+					]
+				  },
+				  "⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "Text color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "cmTxtPlayButton",
+					"tabs": [
+						"SP"
+					]
+				}
+			]
+		}
+	}
+}

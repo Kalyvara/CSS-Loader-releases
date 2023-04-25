@@ -1,0 +1,12 @@
+:root {
+    --cmHlBgColor: linear-gradient(90deg, var(--cmHlItemGradColor1), var(--cmHlItemGradColor2));
+}
+
+/* Context menu item, highlight */
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gpfocus.gpfocuswithin {
+    background: var(--cmHlBgColor);
+}
+/* Context menu item, focused */
+.gamepadcontextmenu_SubMenu_1_tPN.gamepadcontextmenu_active_2Pk-x.gamepadcontextmenu_contextMenuItem_1sdvo {
+    background: var(--cmHlBgColor);
+}

@@ -1,0 +1,18 @@
+/* Apply Play button's color scheme to game screen */
+
+/* Game screen, play button, highlight */
+.BasicUI .appactionbutton_Green_3cI5T .appactionbutton_ButtonChild_2AzIX.Focusable:focus {
+    background: var(--cmPlayButtonColor);
+    color: var(--cmTxtPlayButton);
+    animation: var(--animPlayButtonHl);
+}
+/* Game screen, play button, icon */
+.BasicUI .appactionbutton_Green_3cI5T .appactionbutton_ButtonChild_2AzIX.Focusable:focus > svg {
+	color: var(--cmTxtPlayButton);
+    filter: drop-shadow(0 0 12px #171717a4);
+}
+/* Game screen, play button, text */
+.appactionbutton_Green_3cI5T .appactionbutton_PlayButton_3ydig.gpfocus > .appactionbutton_ButtonText_33cnX {
+	color: var(--cmTxtPlayButton) !important;
+    text-shadow: 0 0 12px #171717a4 !important;
+}
