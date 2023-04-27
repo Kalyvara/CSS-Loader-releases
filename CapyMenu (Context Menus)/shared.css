@@ -103,18 +103,3 @@
     color: var(--cmTxtPlayButton);
     filter: drop-shadow(0px 0px 6px #171717a4) !important;
 }
-
-
-
-/*
-@keyframes txtShadow {
-    0% { text-shadow: none; }
-    50% { text-shadow: 0px 0px 12px #171717a4; }
-    100% { text-shadow: none; }
-}
-@keyframes svgShadow {
-    0% { filter: drop-shadow(0 0 0 #171717a4) }
-    50% { filter: drop-shadow(0 0 12px #171717a4) }
-    100% { filter: drop-shadow(0 0 0 #171717a4) }
-}
-*/
