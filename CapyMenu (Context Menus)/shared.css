@@ -46,6 +46,10 @@
     color: var(--cmTxtColor);
     filter: opacity(0.6);
 }
+.gamepadcontextmenu_contextMenuItem_1sdvo.contextMenuItem.disabled {
+    color: var(--cmTxtColor);
+    filter: opacity(0.6);
+}
 
 /* "Destructive" item on highlight (e.g. Power > Shutdown, Restart, Change Account, Exit Steam) */
 .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Destructive_3aIFv.gamepadcontextmenu_Focused_X813r.gpfocus.gpfocuswithin {
