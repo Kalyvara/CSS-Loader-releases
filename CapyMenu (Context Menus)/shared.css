@@ -98,7 +98,7 @@
     animation: var(--animPlayButtonHl);
     text-shadow: 0 0 12px #171717a4;
 }
-/* Play button, icon */
+/* Play button, icon, highlight */
 .Play.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gpfocus.gpfocuswithin svg {
     color: var(--cmTxtPlayButton);
     filter: drop-shadow(0px 0px 6px #171717a4) !important;
