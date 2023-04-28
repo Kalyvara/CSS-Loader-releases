@@ -1,0 +1,10 @@
+/* Play button, non highlight */
+.Play.gamepadcontextmenu_contextMenuItem_1sdvo {
+    background: var(--cmBgColor);
+    color: var(--cmTxtColor);
+    animation: none;
+}
+/* Play button icon */
+.Play.gamepadcontextmenu_contextMenuItem_1sdvo svg {
+    color: var(--cmTxtColor);
+}
