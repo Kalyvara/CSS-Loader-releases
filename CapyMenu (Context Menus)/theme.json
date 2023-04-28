@@ -2,8 +2,8 @@
 	"name": "CapyMenu (Context Menus)",
 	"author": "Capybara",
 	"target": "Tweak",
-	"version": "v1.0",
-	"description": "A little tweak that adds customization options and color presets for context/options menus. This tweak notably adds animations on highlighted items and Play buttons, and also a gray background filter. These can be disabled to your convenience.",
+	"version": "v1.1",
+	"description": "[v1.1 update] Added a toggle for transparent non-highlighted play button. // A little tweak that adds customization options and color presets for context/options menus. This tweak notably adds animations on highlighted items and Play buttons, and also a gray background filter. All of these can be disabled to your convenience.",
 	"manifest_version": 6,
 	"inject": {
 		"shared.css": [
@@ -222,7 +222,7 @@
 				}
 			]
 		},
-		"Apply Play button's color scheme to game screen": {
+		"Apply highlighted Play button's color scheme to game view screen": {
 			"type": "checkbox",
 			"default": "Yes",
 			"values": {
@@ -232,6 +232,18 @@
 				]
 			  },
 			  "No": {}
+			}
+		},
+		"Transparent non-highlighted play button": {
+			"type": "checkbox",
+			"default": "Yes",
+			"values": {
+			  "No": {
+				"playbutton_noHl.css": [
+				  "SP"
+				]
+			  },
+			  "Yes": {}
 			}
 		},
 		"[Play button, highlight] Background color": {
