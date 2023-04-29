@@ -2,8 +2,8 @@
 	"name": "CapyMenu (QAM)",
 	"author": "Capybara",
 	"target": "Tweak",
-	"version": "v1.0",
-	"description": "A tool offering a variety of options as well as pre-configured colors to customize the appearence of the Quick Access Menu (QAM) (triggered by pressing the three dots button). This includes the possibility to set your own colors and gradients for backgrounds, buttons, sliders (via SuchMeme's Colored Toggles), among other features. While I didn't want to clutter the options too much in order to keep this tweak as user-friendly as possible, it still offers a good amount of configuration possibilities, so you might want to make good use of CSS Loader presets feature. Also, SuchMeme & Emerson-Biggons' Pip-Boy and GrodanBool's Outrun themes helped a lot in figuring out some parts of the styling process, in combination with CEF Debugger.",
+	"version": "v1.1",
+	"description": "A tool offering a variety of options as well as pre-configured colors to customize the appearence of the Quick Access Menu (QAM) (triggered by pressing the three dots button). This includes the possibility to set your own colors and gradients for backgrounds, buttons, sliders, among other features. // [v1.1 update] Colored Toggles dependency has been removed as it themes extra UI components (e.g. Friends badge), customization for toggles through CapyMenu still is available but only applied to QAM now and may get overriden if you also have CT enabled. Also added an option to customize the vertical panel separator.",
 	"manifest_version": 6,
 	"inject": {
 		"shared.css": [
@@ -13,9 +13,7 @@
 			"QuickAccess"
 		]
 	},
-	"dependencies": {
-		"Colored Toggles": {}
-	},
+	"dependencies": {},
 	"patches": {
 		"Bottom border on focused side tab": {
 			"type": "checkbox",
@@ -31,7 +29,7 @@
 		},
 		"Additional space between side tabs": {
 			"type": "checkbox",
-			"default": "Yes",
+			"default": "No",
 			"values": {
 			  "Yes": {
 				"tabs_margin.css": [
@@ -53,47 +51,47 @@
 			  "No": {}
 			}
 		},
-		"Sliders & toggles color": {
+		"Toggles, sliders, ticks color": {
 			"type": "dropdown",
-			"default": "Pastel gradient [default]",
+			"default": "Blue [default]",
 			"values": {
 				"Blue [default]": {
-					"--toggleColor": [
+					"--capyQAM_toggleColor": [
 					  "#2cc9c7",
 					  "QuickAccess"
 					]
 				  },
 				  "Green": {
-					"--toggleColor": [
+					"--capyQAM_toggleColor": [
 					  "#55c96e",
 					  "QuickAccess"
 					]
 				  },
 				  "Yellow": {
-					"--toggleColor": [
+					"--capyQAM_toggleColor": [
 					  "#f2cf5c",
 					  "QuickAccess"
 					]
 				  },
 				  "Red": {
-					"--toggleColor": [
+					"--capyQAM_toggleColor": [
 					  "#c2021e",
 					  "QuickAccess"
 					]
 				  },
 				  "White": {
-					"--toggleColor": [
+					"--capyQAM_toggleColor": [
 					  "#fff",
 					  "QuickAccess"
 					]
 				  },
 				  "Black": {
-					"--toggleColor": [
+					"--capyQAM_toggleColor": [
 					  "#000",
 					  "QuickAccess"
 					]
 				  },
-				  "Pastel gradient [default]": {
+				  "Pastel gradient": {
 					"presets/pastel_toggle.css": [
 						"QuickAccess"
 					]
@@ -110,7 +108,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "toggleColor1",
+					"css_variable": "capyQAM_toggleColor1",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -120,7 +118,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "toggleColor2",
+					"css_variable": "capyQAM_toggleColor2",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -130,7 +128,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "toggleColor3",
+					"css_variable": "capyQAM_toggleColor3",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -139,40 +137,40 @@
 		},
 		"Notification dot color": {
 			"type": "dropdown",
-			"default": "Green [default]",
+			"default": "Yellow [default]",
 			"values": {
 				"Blue": {
-					"--notif": [
+					"--capyQAM_notifDot": [
 					  "#2cc9c7",
 					  "QuickAccess"
 					]
 				  },
-				  "Green [default]": {
-					"--notif": [
+				  "Green": {
+					"--capyQAM_notifDot": [
 					  "#55c96e",
 					  "QuickAccess"
 					]
 				  },
-				  "Yellow": {
-					"--notif": [
+				  "Yellow [default]": {
+					"--capyQAM_notifDot": [
 					  "#f2cf5c",
 					  "QuickAccess"
 					]
 				  },
 				  "Red": {
-					"--notif": [
+					"--capyQAM_notifDot": [
 					  "#c2021e",
 					  "QuickAccess"
 					]
 				  },
 				  "White": {
-					"--notif": [
+					"--capyQAM_notifDot": [
 					  "#fff",
 					  "QuickAccess"
 					]
 				  },
 				  "Black": {
-					"--notif": [
+					"--capyQAM_notifDot": [
 					  "#000",
 					  "QuickAccess"
 					]
@@ -185,7 +183,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "notif",
+					"css_variable": "capyQAM_notifDot",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -194,22 +192,22 @@
 		},
 		"[Main] Background color": {
 			"type": "dropdown",
-			"default": "OLED black [default]",
+			"default": "Grayish black [default]",
 			"values": {
-				"OLED black [default]": {
-					"--bgCPanel": [
+				"OLED black": {
+					"--capyQAM_mainPanelBg": [
 					  "0, 0, 0",
 					  "QuickAccess"
 					]
 				  },
-				  "Grayish black": {
-					"--bgCPanel": [
+				  "Grayish black [default]": {
+					"--capyQAM_mainPanelBg": [
 					  "17, 17, 17",
 					  "QuickAccess"
 					]
 				  },
 				  "White": {
-					"--bgCPanel": [
+					"--capyQAM_mainPanelBg": [
 					  "255, 255, 255",
 					  "QuickAccess"
 					]
@@ -219,7 +217,7 @@
 					  "QuickAccess"
 					]
 				  },
-				  "⚙️ Custom... (disables transparency slider)": {
+				  "⚙️ Custom... (disables opacity slider)": {
 					"custom_mainPanel.css": [
 						"QuickAccess"
 					]
@@ -229,9 +227,9 @@
 				{
 					"name": "Gradient color 1",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "mainGradColor1",
+					"css_variable": "capyQAM_mainPanelGrad1",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -239,9 +237,9 @@
 				{
 					"name": "Gradient color 2",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "mainGradColor2",
+					"css_variable": "capyQAM_mainPanelGrad2",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -249,9 +247,9 @@
 				{
 					"name": "Gradient color 3",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "mainGradColor3",
+					"css_variable": "capyQAM_mainPanelGrad3",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -263,61 +261,113 @@
 			"default": "0.8",
             "values": {
 				"0": {
-				  "--bgCPanelOpacity": [
+				  "--capyQAM_mainPanelOpacity": [
 					"0",
 					"QuickAccess"
 				  ]
 				},
 				"0.2": {
-				  "--bgCPanelOpacity": [
+				  "--capyQAM_mainPanelOpacity": [
 					"0.2",
 					"QuickAccess"
 				  ]
 				},
 				"0.4": {
-				  "--bgCPanelOpacity": [
+				  "--capyQAM_mainPanelOpacity": [
 					"0.4",
 					"QuickAccess"
 				  ]
 				},
 				"0.6": {
-					"--bgCPanelOpacity": [
+					"--capyQAM_mainPanelOpacity": [
 					  "0.6",
 					  "QuickAccess"
 					]
 				  },
 				  "0.8": {
-					"--bgCPanelOpacity": [
+					"--capyQAM_mainPanelOpacity": [
 					  "0.8",
 					  "QuickAccess"
 					]
 				  },
 				  "1": {
-					"--bgCPanelOpacity": [
+					"--capyQAM_mainPanelOpacity": [
 					  "1",
 					  "QuickAccess"
 					]
 				  }
 			  }
         },
+		"[Main] Vertical panel separator type": {
+            "type": "slider",
+			"default": "None",
+            "values": {
+				"None": {},
+				"Type 1": {
+				  "panelSeparator_type1.css": [
+					"QuickAccess"
+				  ]
+				},
+				"Type 2": {
+				  "panelSeparator_type2.css": [
+					"QuickAccess"
+				  ]
+				}
+			  }
+        },
+		"[Main] Vertical panel separator color": {
+			"type": "dropdown",
+			"default": "White [default]",
+			"values": {
+				  "Black": {
+					"--capyQAM_panelSeparatorColor": [
+					  "#000",
+					  "QuickAccess"
+					]
+				  },
+				  "White [default]": {
+					"--capyQAM_panelSeparatorColor": [
+					  "#fff",
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom...": {
+					"--capyQAM_panelSeparatorColor": [
+						"QuickAccess"
+					]
+				  }
+				},
+			"components": [
+				{
+					"name": "[Main] Vertical panel separator color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "capyQAM_panelSeparatorColor",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
 		"[Main] Text color": {
 			"type": "dropdown",
-			"default": "Gray [default]",
+			"default": "Grayish white [default]",
 			"values": {
-				"Gray [default]": {
-					"--mainTextColor": [
+				"Grayish white [default]": {
+					"--capyQAM_mainTextColor": [
 					  "#ccc",
 					  "QuickAccess"
 					]
 				  },
 				  "White": {
-					"--mainTextColor": [
+					"--capyQAM_mainTextColor": [
 						"#fff",
 						"QuickAccess"
 					  ]
 				  },
 				  "Black": {
-					"--mainTextColor": [
+					"--capyQAM_mainTextColor": [
 						"#000",
 						"QuickAccess"
 					  ]
@@ -330,7 +380,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "mainTextColor",
+					"css_variable": "capyQAM_mainTextColor",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -342,19 +392,19 @@
 			"default": "White [default]",
 			"values": {
 				"White [default]": {
-					"--hlMainTextColor": [
+					"--capyQAM_hl_mainTextColor": [
 					  "#fff",
 					  "QuickAccess"
 					]
 				  },
-				  "Gray": {
-					"--hlMainTextColor": [
+				  "Grayish white": {
+					"--capyQAM_hl_mainTextColor": [
 						"#ccc",
 						"QuickAccess"
 					  ]
 				  },
 				  "Black": {
-					"--hlMainTextColor": [
+					"--capyQAM_hl_mainTextColor": [
 						"#000",
 						"QuickAccess"
 					  ]
@@ -367,7 +417,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "hlMainTextColor",
+					"css_variable": "capyQAM_hl_mainTextColor",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -379,19 +429,19 @@
 			"default": "Grayish black [default]",
 			"values": {
 				"OLED black": {
-					"--hlLabel": [
+					"--capyQAM_hl_labelBg": [
 					  "0, 0, 0",
 					  "QuickAccess"
 					]
 				  },
 				  "Grayish black [default]": {
-					"--hlLabel": [
+					"--capyQAM_hl_labelBg": [
 					  "17, 17, 17",
 					  "QuickAccess"
 					]
 				  },
 				  "White": {
-					"--hlLabel": [
+					"--capyQAM_hl_labelBg": [
 					  "255, 255, 255",
 					  "QuickAccess"
 					]
@@ -401,7 +451,7 @@
 					  "QuickAccess"
 					]
 				  },
-				  "⚙️ Custom... (disables transparency slider)": {
+				  "⚙️ Custom... (disables opacity slider)": {
 					"custom_hlLabel.css": [
 						"QuickAccess"
 					]
@@ -411,9 +461,9 @@
 				{
 					"name": "Gradient color 1",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "labelGrad1",
+					"css_variable": "capyQAM_hl_labelGrad1",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -421,9 +471,9 @@
 				{
 					"name": "Gradient color 2",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "labelGrad2",
+					"css_variable": "capyQAM_hl_labelGrad2",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -431,9 +481,9 @@
 				{
 					"name": "Gradient color 3",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "labelGrad3",
+					"css_variable": "capyQAM_hl_labelGrad3",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -442,142 +492,146 @@
 		},
 		"[Main, highlight] Label background opacity": {
             "type": "slider",
-			"default": "0.8",
+			"default": "1",
             "values": {
 				"0": {
-				  "--hlLabelOpacity": [
+				  "--capyQAM_hl_labelOpacity": [
 					"0",
 					"QuickAccess"
 				  ]
 				},
 				"0.2": {
-				  "--hlLabelOpacity": [
+				  "--capyQAM_hl_labelOpacity": [
 					"0.2",
 					"QuickAccess"
 				  ]
 				},
 				"0.4": {
-				  "--hlLabelOpacity": [
+				  "--capyQAM_hl_labelOpacity": [
 					"0.4",
 					"QuickAccess"
 				  ]
 				},
 				"0.6": {
-					"--hlLabelOpacity": [
+					"--capyQAM_hl_labelOpacity": [
 					  "0.6",
 					  "QuickAccess"
 					]
 				  },
 				  "0.8": {
-					"--hlLabelOpacity": [
+					"--capyQAM_hl_labelOpacity": [
 					  "0.8",
 					  "QuickAccess"
 					]
 				  },
 				  "1": {
-					"--hlLabelOpacity": [
+					"--capyQAM_hl_labelOpacity": [
 					  "1",
 					  "QuickAccess"
 					]
 				  }
 			  }
         },
-		"[Main] Separator opacity": {
-            "type": "slider",
-			"default": "0",
-            "values": {
-				"0": {
-				  "--separatorOpacity": [
-					"0",
-					"QuickAccess"
-				  ]
-				},
-				"0.2": {
-				  "--separatorOpacity": [
-					"0.2",
-					"QuickAccess"
-				  ]
-				},
-				"0.4": {
-				  "--separatorOpacity": [
-					"0.4",
-					"QuickAccess"
-				  ]
-				},
-				"0.6": {
-					"--separatorOpacity": [
-					  "0.6",
-					  "QuickAccess"
-					]
-				  },
-				  "0.8": {
-					"--separatorOpacity": [
-					  "0.8",
-					  "QuickAccess"
-					]
-				  },
-				  "1": {
-					"--separatorOpacity": [
-					  "1",
-					  "QuickAccess"
-					]
-				  }
-			  }
-        },
-		"[Main] Separator color": {
+		"[Main] Label separator color": {
 			"type": "dropdown",
 			"default": "Black [default]",
 			"values": {
 				"Black [default]": {
-					"--separatorColor": [
+					"--capyQAM_separatorColor": [
 					  "0, 0, 0",
 					  "QuickAccess"
 					]
 				  },
 				  "White": {
-					"--separatorColor": [
+					"--capyQAM_separatorColor": [
 					  "255, 255, 255",
 					  "QuickAccess"
 					]
 				  },
-				  "⚙️ Custom... (disables transparency slider)": {}
+				  "⚙️ Custom... (disables opacity slider)": {
+					"custom_separator.css": [
+						"QuickAccess"
+					]
+				  }
 				},
 			"components": [
 				{
-					"name": "[Main] Separator color",
+					"name": "[Main] Label separator color",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "separatorColor",
+					"css_variable": "capyQAM_separatorColor",
 					"tabs": [
 						"QuickAccess"
 					]
 				}
 			]
 		},
+		"[Main] Label separator opacity": {
+            "type": "slider",
+			"default": "0",
+            "values": {
+				"0": {
+				  "--capyQAM_separatorOpacity": [
+					"0",
+					"QuickAccess"
+				  ]
+				},
+				"0.2": {
+				  "--capyQAM_separatorOpacity": [
+					"0.2",
+					"QuickAccess"
+				  ]
+				},
+				"0.4": {
+				  "--capyQAM_separatorOpacity": [
+					"0.4",
+					"QuickAccess"
+				  ]
+				},
+				"0.6": {
+					"--capyQAM_separatorOpacity": [
+					  "0.6",
+					  "QuickAccess"
+					]
+				  },
+				  "0.8": {
+					"--capyQAM_separatorOpacity": [
+					  "0.8",
+					  "QuickAccess"
+					]
+				  },
+				  "1": {
+					"--capyQAM_separatorOpacity": [
+					  "1",
+					  "QuickAccess"
+					]
+				  }
+			  }
+        },
 		"[Side] Tabs column color": {
 			"type": "dropdown",
 			"default": "OLED black [default]",
 			"values": {
 				"OLED black [default]": {
-					"--tabsListColor": [
+					"--capyQAM_tabsColmnColor": [
 					  "0, 0, 0",
 					  "QuickAccess"
 					]
 				  },
 				  "Grayish black": {
-					"--tabsListColor": [
+					"--capyQAM_tabsColmnColor": [
 					  "17, 17, 17",
 					  "QuickAccess"
 					]
 				  },
 				  "White": {
-					"--tabsListColor": [
+					"--capyQAM_tabsColmnColor": [
 					  "255, 255, 255",
 					  "QuickAccess"
 					]
 				  },
-				  "⚙️ Custom... (disables transparency slider)": {
+				  "⚙️ Custom... (disables opacity slider)": {
 					"custom_colTabs.css": [
 						"QuickAccess"
 					]
@@ -587,9 +641,9 @@
 				{
 					"name": "Gradient color 1",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "tabsColGrad1",
+					"css_variable": "capyQAM_tabsColmnGrad1",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -597,9 +651,9 @@
 				{
 					"name": "Gradient color 2",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "tabsColGrad2",
+					"css_variable": "capyQAM_tabsColmnGrad2",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -607,9 +661,9 @@
 				{
 					"name": "Gradient color 3",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "tabsColGrad3",
+					"css_variable": "capyQAM_tabsColmnGrad3",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -618,40 +672,40 @@
 		},
 		"[Side] Tabs column opacity": {
             "type": "slider",
-			"default": "0",
+			"default": "1",
             "values": {
 				"0": {
-				  "--tabsListOpacity": [
+				  "--capyQAM_tabsColmnOpacity": [
 					"0",
 					"QuickAccess"
 				  ]
 				},
 				"0.2": {
-				  "--tabsListOpacity": [
+				  "--capyQAM_tabsColmnOpacity": [
 					"0.2",
 					"QuickAccess"
 				  ]
 				},
 				"0.4": {
-				  "--tabsListOpacity": [
+				  "--capyQAM_tabsColmnOpacity": [
 					"0.4",
 					"QuickAccess"
 				  ]
 				},
 				"0.6": {
-					"--tabsListOpacity": [
+					"--capyQAM_tabsColmnOpacity": [
 					  "0.6",
 					  "QuickAccess"
 					]
 				  },
 				  "0.8": {
-					"--tabsListOpacity": [
+					"--capyQAM_tabsColmnOpacity": [
 					  "0.8",
 					  "QuickAccess"
 					]
 				  },
 				  "1": {
-					"--tabsListOpacity": [
+					"--capyQAM_tabsColmnOpacity": [
 					  "1",
 					  "QuickAccess"
 					]
@@ -663,24 +717,24 @@
 			"default": "OLED black [default]",
 			"values": {
 				"OLED black [default]": {
-					"--tabsColor": [
+					"--capyQAM_tabsBgColor": [
 					  "0, 0, 0",
 					  "QuickAccess"
 					]
 				  },
 				  "Grayish black": {
-					"--tabsColor": [
+					"--capyQAM_tabsBgColor": [
 					  "17, 17, 17",
 					  "QuickAccess"
 					]
 				  },
 				  "White": {
-					"--tabsColor": [
+					"--capyQAM_tabsBgColor": [
 					  "255, 255, 255",
 					  "QuickAccess"
 					]
 				  },
-				  "⚙️ Custom... (disables transparency slider)": {
+				  "⚙️ Custom... (disables opacity slider)": {
 					"custom_bgTabs.css": [
 						"QuickAccess"
 					]
@@ -690,9 +744,9 @@
 				{
 					"name": "Gradient color 1",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "bgTabsGrad1",
+					"css_variable": "capyQAM_tabsBgGrad1",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -700,9 +754,9 @@
 				{
 					"name": "Gradient color 2",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "bgTabsGrad2",
+					"css_variable": "capyQAM_tabsBgGrad2",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -710,9 +764,9 @@
 				{
 					"name": "Gradient color 3",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Custom... (disables opacity slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "bgTabsGrad3",
+					"css_variable": "capyQAM_tabsBgGrad3",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -721,40 +775,40 @@
 		},
 		"[Side] Tab background opacity": {
             "type": "slider",
-			"default": "0.8",
+			"default": "1",
             "values": {
 				"0": {
-				  "--tabsOpacity": [
+				  "--capyQAM_tabsBgOpacity": [
 					"0",
 					"QuickAccess"
 				  ]
 				},
 				"0.2": {
-				  "--tabsOpacity": [
+				  "--capyQAM_tabsBgOpacity": [
 					"0.2",
 					"QuickAccess"
 				  ]
 				},
 				"0.4": {
-				  "--tabsOpacity": [
+				  "--capyQAM_tabsBgOpacity": [
 					"0.4",
 					"QuickAccess"
 				  ]
 				},
 				"0.6": {
-					"--tabsOpacity": [
+					"--capyQAM_tabsBgOpacity": [
 					  "0.6",
 					  "QuickAccess"
 					]
 				  },
 				  "0.8": {
-					"--tabsOpacity": [
+					"--capyQAM_tabsBgOpacity": [
 					  "0.8",
 					  "QuickAccess"
 					]
 				  },
 				  "1": {
-					"--tabsOpacity": [
+					"--capyQAM_tabsBgOpacity": [
 					  "1",
 					  "QuickAccess"
 					]
@@ -766,19 +820,19 @@
 			"default": "White [default]",
 			"values": {
 				"White [default]": {
-					"--tabIcon": [
+					"--capyQAM_tabIcon": [
 					  "#fff",
 					  "QuickAccess"
 					]
 				  },
 				  "Grayish black": {
-					"--tabIcon": [
+					"--capyQAM_tabIcon": [
 					  "#171717",
 					  "QuickAccess"
 					]
 				  },
 				  "Black": {
-					"--tabIcon": [
+					"--capyQAM_tabIcon": [
 					  "#000",
 					  "QuickAccess"
 					]
@@ -791,7 +845,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "tabIcon",
+					"css_variable": "capyQAM_tabIcon",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -803,19 +857,19 @@
 			"default": "Grayish black [default]",
 			"values": {
 				"OLED black": {
-					"--hlTabColor": [
+					"--capyQAM_hl_tabsBgColor": [
 					  "0, 0, 0",
 					  "QuickAccess"
 					]
 				  },
 				  "Grayish black [default]": {
-					"--hlTabColor": [
+					"--capyQAM_hl_tabsBgColor": [
 					  "17, 17, 17",
 					  "QuickAccess"
 					]
 				  },
 				  "White": {
-					"--hlTabColor": [
+					"--capyQAM_hl_tabsBgColor": [
 					  "255, 255, 255",
 					  "QuickAccess"
 					]
@@ -832,7 +886,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "hlBgTabsGrad1",
+					"css_variable": "capyQAM_hl_tabsBgGrad1",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -842,7 +896,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "hlBgTabsGrad2",
+					"css_variable": "capyQAM_hl_tabsBgGrad2",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -852,7 +906,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "hlBgTabsGrad3",
+					"css_variable": "capyQAM_hl_tabsBgGrad3",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -864,19 +918,19 @@
 			"default": "White [default]",
 			"values": {
 				"White [default]": {
-					"--hlTabIcon": [
+					"--capyQAM_hl_tabIcon": [
 					  "#fff",
 					  "QuickAccess"
 					]
 				  },
 				  "Grayish black": {
-					"--hlTabIcon": [
+					"--capyQAM_hl_tabIcon": [
 					  "#171717",
 					  "QuickAccess"
 					]
 				  },
 				  "Black": {
-					"--hlTabIcon": [
+					"--capyQAM_hl_tabIcon": [
 					  "#000",
 					  "QuickAccess"
 					]
@@ -889,7 +943,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "hlTabIcon",
+					"css_variable": "capyQAM_hl_tabIcon",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -901,19 +955,19 @@
 			"default": "Grayish black [default]",
 			"values": {
 				"OLED black": {
-					"--ddb": [
+					"--capyQAM_ddButtonBg": [
 					  "#000",
 					  "QuickAccess"
 					]
 				  },
 				  "Grayish black [default]": {
-					"--ddb": [
+					"--capyQAM_ddButtonBg": [
 					  "#171717",
 					  "QuickAccess"
 					]
 				  },
 				  "White": {
-					"--ddb": [
+					"--capyQAM_ddButtonBg": [
 					  "#fff",
 					  "QuickAccess"
 					]
@@ -935,7 +989,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "buttonsGrad1",
+					"css_variable": "capyQAM_ddButtonGrad1",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -945,7 +999,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "buttonsGrad2",
+					"css_variable": "capyQAM_ddButtonGrad2",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -955,7 +1009,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "buttonsGrad3",
+					"css_variable": "capyQAM_ddButtonGrad3",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -964,22 +1018,22 @@
 		},
 		"[Buttons] Text color": {
 			"type": "dropdown",
-			"default": "Gray [default]",
+			"default": "Grayish white [default]",
 			"values": {
-				"Gray [default]": {
-					"--ddbText": [
+				"Grayish white [default]": {
+					"--capyQAM_ddButtonText": [
 					  "#ccc",
 					  "QuickAccess"
 					]
 				  },
 				  "White": {
-					"--ddbText": [
+					"--capyQAM_ddButtonText": [
 					  "#fff",
 					  "QuickAccess"
 					]
 				  },
 				  "Black": {
-					"--ddbText": [
+					"--capyQAM_ddButtonText": [
 					  "#000",
 					  "QuickAccess"
 					]
@@ -992,7 +1046,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "ddbText",
+					"css_variable": "capyQAM_ddButtonText",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -1004,19 +1058,19 @@
 			"default": "White [default]",
 			"values": {
 				"White [default]": {
-					"--hlDdb": [
+					"--capyQAM_hl_ddButtonBg": [
 					  "#fff",
 					  "QuickAccess"
 					]
 				  },
 				"OLED black": {
-					"--hlDdb": [
+					"--capyQAM_hl_ddButtonBg": [
 					  "#000",
 					  "QuickAccess"
 					]
 				  },
 				  "Grayish black": {
-					"--hlDdb": [
+					"--capyQAM_hl_ddButtonBg": [
 					  "#171717",
 					  "QuickAccess"
 					]
@@ -1038,7 +1092,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "hlButtonsGrad1",
+					"css_variable": "capyQAM_hl_ddButtonBgGrad1",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -1048,7 +1102,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "hlButtonsGrad2",
+					"css_variable": "capyQAM_hl_ddButtonBgGrad2",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -1058,7 +1112,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "hlButtonsGrad3",
+					"css_variable": "capyQAM_hl_ddButtonBgGrad3",
 					"tabs": [
 						"QuickAccess"
 					]
@@ -1070,19 +1124,19 @@
 			"default": "Black [default]",
 			"values": {
 				"Black [default]": {
-					"--hlDdbText": [
+					"--capyQAM_hl_ddButtonText": [
 					  "#000",
 					  "QuickAccess"
 					]
 				  },
 				  "White": {
-					"--hlDdbText": [
+					"--capyQAM_hl_ddButtonText": [
 					  "#fff",
 					  "QuickAccess"
 					]
 				  },
-				  "Gray": {
-					"--hlDdbText": [
+				  "Grayish white": {
+					"--capyQAM_hl_ddButtonText": [
 					  "#ccc",
 					  "QuickAccess"
 					]
@@ -1095,7 +1149,7 @@
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "hlDdbText",
+					"css_variable": "capyQAM_hl_ddButtonText",
 					"tabs": [
 						"QuickAccess"
 					]

@@ -1,10 +1,10 @@
 :root {
-    --hlLabel: linear-gradient(45deg, var(--labelGrad1), var(--labelGrad2), var(--labelGrad3));
+    --capyQAM_hl_labelBg: linear-gradient(45deg, var(--capyQAM_hl_labelGrad1), var(--capyQAM_hl_labelGrad2), var(--capyQAM_hl_labelGrad3));
 }
 
 .gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocus, 
 .gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin {
-    background: var(--hlLabel) !important;
+    background: var(--capyQAM_hl_labelBg) !important;
     animation: none;
 }
 
@@ -15,37 +15,37 @@ Same occurrence order as in friendsTab.css
 
 .friendsContainer .friend.gpfocus.gpfocuswithin,
 .groupHeaderContainer.gpfocuswithin .groupName.gpfocus.gpfocuswithin {
-    background: var(--hlLabel) !important;
+    background: var(--capyQAM_hl_labelBg) !important;
 }
 
 /* Sort icon in Friends tab */
 .groupHeaderContainer.gpfocuswithin .SortByRecent {
-    background: var(--hlLabel) !important;
+    background: var(--capyQAM_hl_labelBg) !important;
 }
 
 .friendCategoryContainer .friend.gpfocus.gpfocuswithin, /* Friends tab */
 .favoriteElement.gpfocus.gpfocuswithin, /* Favorites tab */
 .RecentMessagesTabList.FriendsListTabPanel.gpfocuswithin .friend.gpfocuswithin /* Recent chats tab */ {
-    background: var(--hlLabel) !important;
+    background: var(--capyQAM_hl_labelBg) !important;
 }
 
 /* Group chats, entry highlight */
 .GroupsTabList.gpfocuswithin .ChatRoomListGroupItem.gpfocus.gpfocuswithin {
-    background: var(--hlLabel) !important;
+    background: var(--capyQAM_hl_labelBg) !important;
 }
 .GroupsTabList.gpfocuswithin .ChatRoomListGroupItem.gpfocus.gpfocuswithin {
-    background: var(--hlLabel) !important;
+    background: var(--capyQAM_hl_labelBg) !important;
 }
 
 .friendlistListContainer .listContentContainer .DropTarget.friendGroup.gameGroup .groupName.gpfocus.gpfocuswithin {
-    background: var(--hlLabel) !important;
+    background: var(--capyQAM_hl_labelBg) !important;
 }
 
 .recentchatssteamdeck_RecentChatElement_1-Coz.gpfocus.gpfocuswithin {
-    background: var(--hlLabel) !important;
+    background: var(--capyQAM_hl_labelBg) !important;
 }
 
 /* Friends status notification container, highlight */
 .notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin {
-    background: var(--hlLabel) !important;
+    background: var(--capyQAM_hl_labelBg) !important;
 }

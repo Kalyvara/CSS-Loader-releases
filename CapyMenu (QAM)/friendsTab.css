@@ -16,120 +16,120 @@ General
 
 /* Title header */
 .GamepadMode.friendlist .TabPanelHeader {
-    color: var(--mainTextColor) !important;
+    color: var(--capyQAM_mainTextColor) !important;
 }
 
 /* Tabs bar icons */
 .GamepadMode.friendlist .FriendsListTab svg {
-    color: var(--mainTextColor);
+    color: var(--capyQAM_mainTextColor);
     border-radius: 8px;
 }
 
 /* L1, R1 buttons - credits to GrodanBool (Outrun Theme), tweaked */
 .friendslist_TabBumper_3Jr0A.GamepadMode svg path:first-of-type, .GamepadMode .friendslist_TabBumper_3Jr0A svg path:first-of-type {
-    stroke: var(--mainTextColor); /* Buttons outline */
+    stroke: var(--capyQAM_mainTextColor); /* Buttons outline */
 }
 .friendslist_TabBumper_3Jr0A.GamepadMode svg path, .GamepadMode .friendslist_TabBumper_3Jr0A svg path {
-    fill: var(--mainTextColor); /* Buttons label */
+    fill: var(--capyQAM_mainTextColor); /* Buttons label */
 }
 
 /* Active tab icon */
 .GamepadMode.friendlist .FriendsListTab.Active svg {
-    background: var(--hlDdb);
-    color: var(--hlDdbText) !important;
+    background: var(--capyQAM_hl_ddButtonBg);
+    color: var(--capyQAM_hl_ddButtonText) !important;
     box-shadow: none;
     padding-top: 3px; padding-bottom: 3px;
 }
 
 /* Header buttons in friends and chat groups */
 .FriendActionsContainer .friendListButton { /* Friends tab */
-    background: var(--ddb) !important;
-    color: var(--ddbText) !important;
+    background: var(--capyQAM_ddButtonBg) !important;
+    color: var(--capyQAM_ddButtonText) !important;
 }
 .FriendActionsContainer.gpfocuswithin .friendListButton.gpfocus.gpfocuswithin {
-    background: var(--hlDdb) !important;
-    color: var(--hlDdbText) !important;
+    background: var(--capyQAM_hl_ddButtonBg) !important;
+    color: var(--capyQAM_hl_ddButtonText) !important;
 }
 
 .FriendActionsContainer .NewChatGroupButton { /* Group chats tab */
-    background: var(--ddb) !important;
-    color: var(--ddbText) !important;
+    background: var(--capyQAM_ddButtonBg) !important;
+    color: var(--capyQAM_ddButtonText) !important;
 }
 .FriendActionsContainer.gpfocuswithin .NewChatGroupButton.gpfocus.gpfocuswithin {
-    background: var(--hlDdb) !important;
-    color: var(--hlDdbText) !important;
+    background: var(--capyQAM_hl_ddButtonBg) !important;
+    color: var(--capyQAM_hl_ddButtonText) !important;
 }
 
 /* Empty chat room text */
 .GroupChats .ChatRoomList_Empty {
-    color: var(--mainTextColor);
+    color: var(--capyQAM_mainTextColor);
 }
 
 /* Online category in Friends tab */
 .DropTarget.friendGroup.onlineFriends .groupName {
-    color: var(--mainTextColor) !important;
+    color: var(--capyQAM_mainTextColor) !important;
 } /* gpfocus */
 
 /* Offline category in Friends tab */
 .DropTarget.friendGroup.offlineFriends .groupName {
-    color: var(--mainTextColor) !important;
+    color: var(--capyQAM_mainTextColor) !important;
 } /* gpfocus to add */
 
 /* Category count in Friends tab */
 .DropTarget.friendGroup .groupHeaderContainer .groupName .groupCount {
-    color: var(--mainTextColor);
+    color: var(--capyQAM_mainTextColor);
     filter: opacity(0.6);
 }
 
 /* Category count in Friends tab, highlight */
 .DropTarget.friendGroup .groupHeaderContainer.gpfocuswithin .groupName.gpfocus.gpfocuswithin .groupCount {
-    color: var(--hlMainTextColor);
+    color: var(--capyQAM_hl_mainTextColor);
 }
 
 
 /* Category header highlight in Friends tab */
 .friendsContainer .friend.gpfocus.gpfocuswithin,
 .groupHeaderContainer.gpfocuswithin .groupName.gpfocus.gpfocuswithin {
-    background: rgba(var(--hlLabel), var(--hlLabelOpacity)) !important;
-    color: var(--hlMainTextColor) !important;
+    background: rgba(var(--capyQAM_hl_labelBg), var(--capyQAM_hl_labelOpacity)) !important;
+    color: var(--capyQAM_hl_mainTextColor) !important;
 }
 
 /* Sort icon in Friends tab */
 .groupHeaderContainer.gpfocuswithin .SortByRecent {
-    background: rgba(var(--hlLabel), var(--hlLabelOpacity)) !important;
+    background: rgba(var(--capyQAM_hl_labelBg), var(--capyQAM_hl_labelOpacity)) !important;
 }
 .groupHeaderContainer .SortByRecent svg .alphabet, .groupHeaderContainer .SortByRecent svg .time, .groupHeaderContainer .SortByRecent svg .Arrow {
-    stroke: var(--mainTextColor);
+    stroke: var(--capyQAM_mainTextColor);
 }
 .groupHeaderContainer.gpfocuswithin .SortByRecent.gpfocus.gpfocuswithin svg .alphabet,
 .groupHeaderContainer.gpfocuswithin .SortByRecent.gpfocus.gpfocuswithin svg .time,
 .groupHeaderContainer.gpfocuswithin .SortByRecent.gpfocus.gpfocuswithin svg .Arrow {
-    stroke: var(--hlMainTextColor);
+    stroke: var(--capyQAM_hl_mainTextColor);
 }
 
 /* Label highlight */
 .friendCategoryContainer .friend.gpfocus.gpfocuswithin, /* Friends tab */
 .favoriteElement.gpfocus.gpfocuswithin, /* Favorites tab */
 .RecentMessagesTabList.FriendsListTabPanel.gpfocuswithin .friend.gpfocuswithin /* Recent chats tab */ {
-    background: rgba(var(--hlLabel), var(--hlLabelOpacity)) !important;
+    background: rgba(var(--capyQAM_hl_labelBg), var(--capyQAM_hl_labelOpacity)) !important;
 }
 
 /* Group chats, entry highlight */
 .GroupsTabList.gpfocuswithin .ChatRoomListGroupItem.gpfocus.gpfocuswithin {
-    background: rgba(var(--hlLabel), var(--hlLabelOpacity)) !important;
+    background: rgba(var(--capyQAM_hl_labelBg), var(--capyQAM_hl_labelOpacity)) !important;
 }
 .GroupsTabList.gpfocuswithin .ChatRoomListGroupItem.gpfocus.gpfocuswithin {
-    background: rgba(var(--hlLabel), var(--hlLabelOpacity)) !important;
+    background: rgba(var(--capyQAM_hl_labelBg), var(--capyQAM_hl_labelOpacity)) !important;
 }
 
 /* Friends' game running */
 .friendlistListContainer .listContentContainer .DropTarget.friendGroup.friendGroup.gameGroup .groupName {
-    color: var(--mainTextColor) !important;
+    color: var(--capyQAM_mainTextColor) !important;
 }
 /* Friends' game running, highlight */
 .friendlistListContainer .listContentContainer .DropTarget.friendGroup.gameGroup .groupName.gpfocus.gpfocuswithin {
-    color: var(--hlMainTextColor) !important;
-    background: rgba(var(--hlLabel), var(--hlLabelOpacity)) !important;
+    color: var(--capyQAM_hl_mainTextColor) !important;
+    background: rgba(var(--capyQAM_hl_labelBg), var(--capyQAM_hl_labelOpacity)) !important;
 }
 /* Group count for game running to be added */
 
@@ -147,7 +147,7 @@ Friend entry
 .friendCategoryContainer .friend.offline .personanameandstatus_playerName_r62qz, /* Friends tab */
 .favoriteElement .friend.offline .personanameandstatus_playerName_r62qz, /* Favorites tab */
 .recentchatssteamdeck_RecentChatsList_2-4f0 .friend.offline .personanameandstatus_playerName_r62qz /* Recent chats */ {
-    color: var(--mainTextColor);
+    color: var(--capyQAM_mainTextColor);
     text-shadow: none !important;
 }
 
@@ -155,14 +155,14 @@ Friend entry
 .friendCategoryContainer .friend.offline.gpfocus.gpfocuswithin .personanameandstatus_playerName_r62qz, /* Friends tab */
 .favoriteElement.gpfocus.gpfocuswithin .friend.offline .personanameandstatus_playerName_r62qz, /* Favorites tab */
 .recentchatssteamdeck_RecentChatsList_2-4f0 .friend.offline.gpfocus.gpfocuswithin .personanameandstatus_playerName_r62qz /* Recent chats */ {
-    color: var(--hlMainTextColor);
+    color: var(--capyQAM_hl_mainTextColor);
     text-shadow: none !important;
 }
 
 /* Offline, rich presence status */
 .friendCategoryContainer .friend.offline .personanameandstatus_richPresenceContainer_2nrSd .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N, /* Friends tab */
 .FavoritesTabList.gpfocuswithin .favoriteElement .friend.offline .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N /* Favorites tab */ {
-    color: var(--mainTextColor);
+    color: var(--capyQAM_mainTextColor);
     filter: opacity(0.9);
     text-shadow: none !important;
 }
@@ -171,7 +171,7 @@ Friend entry
 /* Offline, rich presence status, highlight */
 .friendCategoryContainer .friend.offline.gpfocus.gpfocuswithin .personanameandstatus_richPresenceContainer_2nrSd .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N, /* Friends tab */
 .FavoritesTabList.gpfocuswithin .favoriteElement.gpfocus.gpfocuswithin .friend.offline .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N /* Favorites tab */ {
-    color: var(--hlMainTextColor);
+    color: var(--capyQAM_hl_mainTextColor);
     text-shadow: none !important;
 }
 
@@ -192,17 +192,17 @@ Friend entry
 
 /* Chat entry */
 .GroupsTabList .ChatRoomListGroupItem .chatRoomName {
-    color: var(--mainTextColor);
+    color: var(--capyQAM_mainTextColor);
 }
 
 /* Chat entry, highlight */
 .GroupsTabList.gpfocuswithin .ChatRoomListGroupItem.gpfocus.gpfocuswithin .chatRoomName {
-    color: var(--hlMainTextColor);
+    color: var(--capyQAM_hl_mainTextColor);
 }
 
 /* Last message and time in Recent Chats tab */
 .friendslist_LastMessage_3HNwU, .recentchatssteamdeck_Time_20ewu {
-    color: var(--mainTextColor) !important;
+    color: var(--capyQAM_mainTextColor) !important;
     filter: opacity(0.6);
     text-shadow: none !important;
 }
@@ -210,21 +210,21 @@ Friend entry
 /* Last message and time in Recent Chats tab, highlight */
 .friend.recentchatssteamdeck_RecentChatElement_1-Coz.gpfocus.gpfocuswithin .friendslist_LastMessage_3HNwU,
 .friend.recentchatssteamdeck_RecentChatElement_1-Coz.gpfocus.gpfocuswithin .recentchatssteamdeck_Time_20ewu {
-    color: var(--hlMainTextColor) !important;
+    color: var(--capyQAM_hl_mainTextColor) !important;
 }
 
 .recentchatssteamdeck_RecentChatElement_1-Coz.gpfocus.gpfocuswithin {
-    background: rgba(var(--hlLabel), var(--hlLabelOpacity)) !important;
+    background: rgba(var(--capyQAM_hl_labelBg), var(--capyQAM_hl_labelOpacity)) !important;
 }
 
 /* Group chat entry details */
 .recentchatssteamdeck_RecentChatElement_1-Coz.ChatRoomListGroupItem .chatRoomName, .recentchatssteamdeck_RecentChatElement_1-Coz.ChatRoomListGroupItem .lastChatMessage,
 .recentchatssteamdeck_RecentChatElement_1-Coz.ChatRoomListGroupItem .ChatRoomListGroupItem_header .recentchatssteamdeck_Time_20ewu {
-    color: var(--mainTextColor) !important;
+    color: var(--capyQAM_mainTextColor) !important;
 }
 
 /* Group chat entry details, highlight */
 .recentchatssteamdeck_RecentChatElement_1-Coz.ChatRoomListGroupItem.gpfocus.gpfocuswithin .chatRoomName, .recentchatssteamdeck_RecentChatElement_1-Coz.ChatRoomListGroupItem.gpfocus.gpfocuswithin .lastChatMessage,
 .recentchatssteamdeck_RecentChatElement_1-Coz.ChatRoomListGroupItem.gpfocus.gpfocuswithin .ChatRoomListGroupItem_header .recentchatssteamdeck_Time_20ewu {
-    color: var(--hlMainTextColor) !important;
+    color: var(--capyQAM_hl_mainTextColor) !important;
 }
