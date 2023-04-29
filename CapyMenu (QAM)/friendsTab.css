@@ -1,8 +1,9 @@
 /* ---
-General
+CapyQAM, friends section
+v1.1
 --- */
 
-
+/* General */
 
 
 .GamepadMode.friendlist, .GamepadMode.friendlist .FriendsListSteamDeckTabs {
@@ -133,6 +134,20 @@ General
 }
 /* Group count for game running to be added */
 
+/* Remove friends list + recent chats top border */
+
+/* Offline */
+.FriendsListContent .friendlistListContainer .friendGroup.offlineFriends.GamepadMode, .GamepadMode .FriendsListContent .friendlistListContainer .friendGroup.offlineFriends {
+    border-top: none;
+}
+/* Online */
+.FriendsListContent .friendlistListContainer .friendGroup.onlineFriends.GamepadMode, .GamepadMode .FriendsListContent .friendlistListContainer .friendGroup.onlineFriends {
+    border-top: none;
+}
+/* Recent chats */
+.recentchatssteamdeck_RecentChatsList_2-4f0 .recentchatssteamdeck_RecentChatElement_1-Coz {
+    border-top: none;
+}
 
 /* ---
 Friend entry
