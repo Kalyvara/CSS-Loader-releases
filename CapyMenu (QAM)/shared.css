@@ -467,8 +467,3 @@ Decky plugins
     background: var(--capyQAM_hl_ddButtonBg) !important;
     color: var(--capyQAM_hl_ddButtonText) !important;
 }
-
-/* AutoFlatpaks */
-button[type="button" class="DialogButton _DialogLayout Secondary gamepaddialog_Button_1kn70 Focusable" tabindex="0" style="padding: 0px; background: rgba(255, 255, 255, 0); color: unset;"] {
-    background: none !important;
-}
