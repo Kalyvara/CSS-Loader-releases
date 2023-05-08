@@ -81,7 +81,7 @@ General
 
 /* Chat room avatar text */
 .ChatRoomGroupAvatar_initials {
-    color: var(--capyQAM_ddButtonText); /* text color is handled by this property */
+    background: var(--capyQAM_ddButtonText); /* text color is handled by this property */
     text-shadow: none;
     padding-top: 8px;
 }
