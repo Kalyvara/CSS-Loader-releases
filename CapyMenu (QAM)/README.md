@@ -12,7 +12,7 @@
 - additional bug fixes (most notable is buggy highlighted buttons in some menus, e.g. Decky plugins, Remote Play Together section)
 
 
-- ALL the CSS variables were renamed into more explicit names, also should avoid possible conflicts with other themes
+- ALL the CSS variables were renamed as more explicit names, also should avoid possible conflicts with other themes
 - CSS code is more organized
 
 ### v1.1
