@@ -1,13 +1,15 @@
 /* ---
 CapyMenu QAM
+v2.0
 Friends section
-v1.1
+By Capybara/Kalyvara
 --- */
 
 
 
-/* General */
-
+/* ---
+General
+--- */
 
 .GamepadMode.friendlist, .GamepadMode.friendlist .FriendsListSteamDeckTabs {
     background: none;
@@ -26,7 +28,8 @@ v1.1
 /* Tabs bar icons */
 .GamepadMode.friendlist .FriendsListTab svg {
     color: var(--capyQAM_mainTextColor);
-    border-radius: 8px;
+    filter: opacity(0.3);
+    /* border-radius: 8px; */
 }
 
 /* L1, R1 buttons - credits to GrodanBool (Outrun Theme), tweaked */
@@ -39,10 +42,13 @@ v1.1
 
 /* Active tab icon */
 .GamepadMode.friendlist .FriendsListTab.Active svg {
-    background: var(--capyQAM_hl_ddButtonBg);
-    color: var(--capyQAM_hl_ddButtonText) !important;
+    background: none;
+    color: var(--capyQAM_mainTextColor);
+    filter: opacity(1);
+    /* background: var(--capyQAM_hl_ddButtonBg); */
+    /* color: var(--capyQAM_hl_ddButtonText) !important; */
     box-shadow: none;
-    padding-top: 3px; padding-bottom: 3px;
+    /* padding-top: 3px; padding-bottom: 3px; */
 }
 
 /* Header buttons in friends and chat groups */
@@ -64,6 +70,22 @@ v1.1
     color: var(--capyQAM_hl_ddButtonText) !important;
 }
 
+/* Chat room avatar */
+.ChatRoomListGroupItem .ChatRoomGroupAvatar.GamepadMode, .GamepadMode .ChatRoomListGroupItem .ChatRoomGroupAvatar {
+    border-width: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--capyQAM_ddButtonBg);
+    box-shadow: none;
+}
+
+/* Chat room avatar text */
+.ChatRoomGroupAvatar_initials {
+    color: var(--capyQAM_ddButtonText); /* text color is handled by this property */
+    text-shadow: none;
+    padding-top: 8px;
+}
+
 /* Empty chat room text */
 .GroupChats .ChatRoomList_Empty {
     color: var(--capyQAM_mainTextColor);
@@ -72,12 +94,12 @@ v1.1
 /* Online category in Friends tab */
 .DropTarget.friendGroup.onlineFriends .groupName {
     color: var(--capyQAM_mainTextColor) !important;
-} /* gpfocus */
+}
 
 /* Offline category in Friends tab */
 .DropTarget.friendGroup.offlineFriends .groupName {
     color: var(--capyQAM_mainTextColor) !important;
-} /* gpfocus to add */
+}
 
 /* Category count in Friends tab */
 .DropTarget.friendGroup .groupHeaderContainer .groupName .groupCount {
@@ -137,28 +159,28 @@ v1.1
 }
 /* Group count for game running to be added */
 
-/* Remove friends list + recent chats top border */
-
-/* Offline */
+/* Removing friends list + recent chats top border */
 .FriendsListContent .friendlistListContainer .friendGroup.offlineFriends.GamepadMode, .GamepadMode .FriendsListContent .friendlistListContainer .friendGroup.offlineFriends {
-    border-top: none;
+    border-top: none; /* Offline */
 }
-/* Online */
 .FriendsListContent .friendlistListContainer .friendGroup.onlineFriends.GamepadMode, .GamepadMode .FriendsListContent .friendlistListContainer .friendGroup.onlineFriends {
-    border-top: none;
+    border-top: none; /* Online */
 }
-/* Recent chats */
 .recentchatssteamdeck_RecentChatsList_2-4f0 .recentchatssteamdeck_RecentChatElement_1-Coz {
-    border-top: none;
+    border-top: none; /* Recent chats */
 }
 
 /* ---
 Friend entry
 --- */
 
-/* -- as a general principle, the user-defined main text color scheme is used for offline status, while a text-shadow is added to limit possible readability issues for other status -- */ 
+/* --
+the user-defined main text color scheme is used for offline status, while a text-shadow is added to limit possible readability issues for other status -- */ 
 
-
+/* Rich presence non focused */
+.GamepadMode .personanameandstatus_twoLine_27M2G .personanameandstatus_richPresenceLabel_1k82N {
+    color: var(--capyQAM_mainTextColor);
+}
 
 
 /* Offline, friend name in all tabs */
@@ -185,7 +207,6 @@ Friend entry
     text-shadow: none !important;
 }
 
-
 /* Offline, rich presence status, highlight */
 .friendCategoryContainer .friend.offline.gpfocus.gpfocuswithin .personanameandstatus_richPresenceContainer_2nrSd .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N, /* Friends tab */
 .FavoritesTabList.gpfocuswithin .favoriteElement.gpfocus.gpfocuswithin .friend.offline .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N /* Favorites tab */ {
@@ -194,18 +215,14 @@ Friend entry
 }
 
 /* Online, friend name in all tabs */
-.friendCategoryContainer .friend.online/* gpfocus gpfocuswithin */ .personanameandstatus_playerName_r62qz,
-.friendCategoryContainer .friend.online .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N, /* Friends tab */
-.friendsContainer .friend.ingame .personanameandstatus_playerName_r62qz,
-.friendsContainer .friend.ingame .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N, /* Friends tab */
-.favoriteElement .friend.online .personanameandstatus_playerName_r62qz,
-.favoriteElement .friend.online .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N, /* Favorites tab */
-.favoriteElement .friend.ingame .personanameandstatus_playerName_r62qz,
-.favoriteElement .friend.ingame .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N,
+.GamepadMode .online .personanameandstatus_playerName_r62qz,
+.GamepadMode .ingame .personanameandstatus_playerName_r62qz,
+.GamepadMode .online .personanameandstatus_richPresenceLabel_1k82N,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_1k82N,
 .friendsnooze_SnoozeZ_1DArl.friendsnooze_Z1_1OyrT,
 .friendsnooze_SnoozeZ_1DArl.friendsnooze_Z2_1mx4k,
 .friendsnooze_SnoozeZ_1DArl.friendsnooze_Z3_1ltvK /* Away zzz */ {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6) !important;
+    text-shadow: .5px .5px 0px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Chat entry */
@@ -230,7 +247,6 @@ Friend entry
 .friend.recentchatssteamdeck_RecentChatElement_1-Coz.gpfocus.gpfocuswithin .recentchatssteamdeck_Time_20ewu {
     color: var(--capyQAM_hl_mainTextColor) !important;
 }
-
 .recentchatssteamdeck_RecentChatElement_1-Coz.gpfocus.gpfocuswithin {
     background: rgba(var(--capyQAM_hl_labelBg), var(--capyQAM_hl_labelOpacity)) !important;
 }

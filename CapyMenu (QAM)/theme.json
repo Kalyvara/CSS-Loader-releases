@@ -1,9 +1,9 @@
 {
-	"name": "CapyMenu (QAM)",
+	"name": "Testing: CapyMenu (QAM)",
 	"author": "Capybara",
 	"target": "Tweak",
-	"version": "v1.1",
-	"description": "A tool offering a variety of options as well as pre-configured colors to customize the appearence of the Quick Access Menu (QAM) (triggered by pressing the three dots button). This includes the possibility to set your own colors and gradients for backgrounds, buttons, sliders, among other features. // [v1.1 update] Colored Toggles dependency has been removed as it themes extra UI components (e.g. Friends badge), customization for toggles through CapyMenu still is available but only applied to QAM now and may get overriden if you also have CT enabled. Also added an option to customize the vertical panel separator.",
+	"version": "v2.0",
+	"description": "A tool offering a plethora of options and presets to customize the appearence of the Quick Access Menu (QAM) (triggered by pressing the three dots button). This includes the possibility to set your own colors and gradients for backgrounds, texts, buttons, among other features. //// [v2.0 big update] UI is even cleaner with much less clutter and more color consistency ; removed SuchMeme's Colored Toggles dependency to allow more flexibility as it themes extra UI components (e.g. Friends badge), please note though that custom toggles and sliders through CapyMenu are still available but they are now only limited to the QAM ; implemented Charmics' Avatar Customization Suite for in-game view, full credits to them ; several bug fixes.",
 	"manifest_version": 6,
 	"inject": {
 		"shared.css": [
@@ -258,7 +258,7 @@
 		},
 		"[Main] Background opacity": {
             "type": "slider",
-			"default": "0.8",
+			"default": "0.9",
             "values": {
 				"0": {
 				  "--capyQAM_mainPanelOpacity": [
@@ -266,27 +266,57 @@
 					"QuickAccess"
 				  ]
 				},
+				"0.1": {
+					"--capyQAM_mainPanelOpacity": [
+					  "0.1",
+					  "QuickAccess"
+					]
+				  },
 				"0.2": {
 				  "--capyQAM_mainPanelOpacity": [
 					"0.2",
 					"QuickAccess"
 				  ]
 				},
+				"0.3": {
+					"--capyQAM_mainPanelOpacity": [
+					  "0.3",
+					  "QuickAccess"
+					]
+				  },
 				"0.4": {
 				  "--capyQAM_mainPanelOpacity": [
 					"0.4",
 					"QuickAccess"
 				  ]
 				},
+				"0.5": {
+					"--capyQAM_mainPanelOpacity": [
+					  "0.5",
+					  "QuickAccess"
+					]
+				  },
 				"0.6": {
 					"--capyQAM_mainPanelOpacity": [
 					  "0.6",
 					  "QuickAccess"
 					]
 				  },
+				  "0.7": {
+					"--capyQAM_mainPanelOpacity": [
+					  "0.7",
+					  "QuickAccess"
+					]
+				  },
 				  "0.8": {
 					"--capyQAM_mainPanelOpacity": [
 					  "0.8",
+					  "QuickAccess"
+					]
+				  },
+				  "0.9": {
+					"--capyQAM_mainPanelOpacity": [
+					  "0.9",
 					  "QuickAccess"
 					]
 				  },
@@ -500,27 +530,57 @@
 					"QuickAccess"
 				  ]
 				},
+				"0.1": {
+					"--capyQAM_hl_labelOpacity": [
+					  "0.1",
+					  "QuickAccess"
+					]
+				  },
 				"0.2": {
 				  "--capyQAM_hl_labelOpacity": [
 					"0.2",
 					"QuickAccess"
 				  ]
 				},
+				"0.3": {
+					"--capyQAM_hl_labelOpacity": [
+					  "0.3",
+					  "QuickAccess"
+					]
+				  },
 				"0.4": {
 				  "--capyQAM_hl_labelOpacity": [
 					"0.4",
 					"QuickAccess"
 				  ]
 				},
+				"0.5": {
+					"--capyQAM_hl_labelOpacity": [
+					  "0.5",
+					  "QuickAccess"
+					]
+				  },
 				"0.6": {
 					"--capyQAM_hl_labelOpacity": [
 					  "0.6",
 					  "QuickAccess"
 					]
 				  },
+				  "0.7": {
+					"--capyQAM_hl_labelOpacity": [
+					  "0.7",
+					  "QuickAccess"
+					]
+				  },
 				  "0.8": {
 					"--capyQAM_hl_labelOpacity": [
 					  "0.8",
+					  "QuickAccess"
+					]
+				  },
+				  "0.9": {
+					"--capyQAM_hl_labelOpacity": [
+					  "0.9",
 					  "QuickAccess"
 					]
 				  },
@@ -577,27 +637,57 @@
 					"QuickAccess"
 				  ]
 				},
+				"0.1": {
+					"--capyQAM_separatorOpacity": [
+					  "0.1",
+					  "QuickAccess"
+					]
+				  },
 				"0.2": {
 				  "--capyQAM_separatorOpacity": [
 					"0.2",
 					"QuickAccess"
 				  ]
 				},
+				"0.3": {
+					"--capyQAM_separatorOpacity": [
+					  "0.3",
+					  "QuickAccess"
+					]
+				  },
 				"0.4": {
 				  "--capyQAM_separatorOpacity": [
 					"0.4",
 					"QuickAccess"
 				  ]
 				},
+				"0.5": {
+					"--capyQAM_separatorOpacity": [
+					  "0.5",
+					  "QuickAccess"
+					]
+				  },
 				"0.6": {
 					"--capyQAM_separatorOpacity": [
 					  "0.6",
 					  "QuickAccess"
 					]
 				  },
+				  "0.7": {
+					"--capyQAM_separatorOpacity": [
+					  "0.7",
+					  "QuickAccess"
+					]
+				  },
 				  "0.8": {
 					"--capyQAM_separatorOpacity": [
 					  "0.8",
+					  "QuickAccess"
+					]
+				  },
+				  "0.9": {
+					"--capyQAM_separatorOpacity": [
+					  "0.9",
 					  "QuickAccess"
 					]
 				  },
@@ -680,27 +770,57 @@
 					"QuickAccess"
 				  ]
 				},
+				"0.1": {
+					"--capyQAM_tabsColmnOpacity": [
+					  "0.1",
+					  "QuickAccess"
+					]
+				  },
 				"0.2": {
 				  "--capyQAM_tabsColmnOpacity": [
 					"0.2",
 					"QuickAccess"
 				  ]
 				},
+				"0.3": {
+					"--capyQAM_tabsColmnOpacity": [
+					  "0.3",
+					  "QuickAccess"
+					]
+				  },
 				"0.4": {
 				  "--capyQAM_tabsColmnOpacity": [
 					"0.4",
 					"QuickAccess"
 				  ]
 				},
+				"0.5": {
+					"--capyQAM_tabsColmnOpacity": [
+					  "0.5",
+					  "QuickAccess"
+					]
+				  },
 				"0.6": {
 					"--capyQAM_tabsColmnOpacity": [
 					  "0.6",
 					  "QuickAccess"
 					]
 				  },
+				  "0.7": {
+					"--capyQAM_tabsColmnOpacity": [
+					  "0.7",
+					  "QuickAccess"
+					]
+				  },
 				  "0.8": {
 					"--capyQAM_tabsColmnOpacity": [
 					  "0.8",
+					  "QuickAccess"
+					]
+				  },
+				  "0.9": {
+					"--capyQAM_tabsColmnOpacity": [
+					  "0.9",
 					  "QuickAccess"
 					]
 				  },
@@ -783,27 +903,57 @@
 					"QuickAccess"
 				  ]
 				},
+				"0.1": {
+					"--capyQAM_tabsBgOpacity": [
+					  "0.1",
+					  "QuickAccess"
+					]
+				  },
 				"0.2": {
 				  "--capyQAM_tabsBgOpacity": [
 					"0.2",
 					"QuickAccess"
 				  ]
 				},
+				"0.3": {
+					"--capyQAM_tabsBgOpacity": [
+					  "0.3",
+					  "QuickAccess"
+					]
+				  },
 				"0.4": {
 				  "--capyQAM_tabsBgOpacity": [
 					"0.4",
 					"QuickAccess"
 				  ]
 				},
+				"0.5": {
+					"--capyQAM_tabsBgOpacity": [
+					  "0.5",
+					  "QuickAccess"
+					]
+				  },
 				"0.6": {
 					"--capyQAM_tabsBgOpacity": [
 					  "0.6",
 					  "QuickAccess"
 					]
 				  },
+				  "0.7": {
+					"--capyQAM_tabsBgOpacity": [
+					  "0.7",
+					  "QuickAccess"
+					]
+				  },
 				  "0.8": {
 					"--capyQAM_tabsBgOpacity": [
 					  "0.8",
+					  "QuickAccess"
+					]
+				  },
+				  "0.9": {
+					"--capyQAM_tabsBgOpacity": [
+					  "0.9",
 					  "QuickAccess"
 					]
 				  },
@@ -1155,6 +1305,271 @@
 					]
 				}
 			]
+		},
+        "[In-game] Header and footer background color": {
+			"type": "dropdown",
+			"default": "OLED black [default]",
+			"values": {
+				"OLED black [default]": {
+					"--capyQAM_headerFooterBgColor": [
+					  "0, 0, 0",
+					  "QuickAccess"
+					]
+				  },
+				  "White": {
+					"--capyQAM_headerFooterBgColor": [
+					  "255, 255, 255",
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom... (disables opacity slider)": {
+                    "custom_headerFooter.css": [
+						"QuickAccess"
+					]
+                  }
+				},
+			"components": [
+				{
+					"name": "[In-game] Header and footer background color",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables opacity slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "capyQAM_headFootGrad1",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+                {
+					"name": "[In-game] Header and footer background color",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables opacity slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "capyQAM_headFootGrad2",
+					"tabs": [
+						"QuickAccess"
+					]
+				},
+                {
+					"name": "[In-game] Header and footer background color",
+					"type": "color-picker",
+					"on": "⚙️ Custom... (disables opacity slider)",
+					"default": "#34e8ebFF",
+					"css_variable": "capyQAM_headFootGrad3",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+        "[In-game] Header and footer background opacity": {
+            "type": "slider",
+			"default": "1",
+            "values": {
+				"0": {
+				  "--capyQAM_headerFooterOpacity": [
+					"0",
+					"QuickAccess"
+				  ]
+				},
+				"0.1": {
+					"--capyQAM_headerFooterOpacity": [
+					  "0.1",
+					  "QuickAccess"
+					]
+				  },
+				"0.2": {
+				  "--capyQAM_headerFooterOpacity": [
+					"0.2",
+					"QuickAccess"
+				  ]
+				},
+				"0.3": {
+					"--capyQAM_headerFooterOpacity": [
+					  "0.3",
+					  "QuickAccess"
+					]
+				  },
+				"0.4": {
+				  "--capyQAM_headerFooterOpacity": [
+					"0.4",
+					"QuickAccess"
+				  ]
+				},
+				"0.5": {
+					"--capyQAM_headerFooterOpacity": [
+					  "0.5",
+					  "QuickAccess"
+					]
+				  },
+				"0.6": {
+					"--capyQAM_headerFooterOpacity": [
+					  "0.6",
+					  "QuickAccess"
+					]
+				  },
+				  "0.7": {
+					"--capyQAM_headerFooterOpacity": [
+					  "0.7",
+					  "QuickAccess"
+					]
+				  },
+				  "0.8": {
+					"--capyQAM_headerFooterOpacity": [
+					  "0.8",
+					  "QuickAccess"
+					]
+				  },
+				  "0.9": {
+					"--capyQAM_headerFooterOpacity": [
+					  "0.9",
+					  "QuickAccess"
+					]
+				  },
+				  "1": {
+					"--capyQAM_headerFooterOpacity": [
+					  "1",
+					  "QuickAccess"
+					]
+				  }
+			  }
+        },
+        "[In-game] Header and footer text color": {
+			"type": "dropdown",
+			"default": "White [default]",
+			"values": {
+				"White [default]": {
+					"--capyQAM_headerFooterTextColor": [
+					  "#fff",
+					  "QuickAccess"
+					]
+				  },
+				  "Black": {
+					"--capyQAM_headerFooterTextColor": [
+					  "#000",
+					  "QuickAccess"
+					]
+				  },
+				  "⚙️ Custom...": {}
+				},
+			"components": [
+				{
+					"name": "[In-game] Header and footer text color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "--capyQAM_headerFooterTextColor",
+					"tabs": [
+						"QuickAccess"
+					]
+				}
+			]
+		},
+        "[In-game] Charmics' Avatar Customization Suite": {
+			"type": "dropdown",
+			"default": "Default",
+			"values": {
+                "Default": {
+                  "avatars/00-default.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Normal Narrow": {
+                  "avatars/10-normal-narrow.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Normal Dot": {
+                  "avatars/11-normal-dot.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Normal Square": {
+                  "avatars/12-normal-square.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Normal Only": {
+                  "avatars/13-normal-only.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Frameless Edge": {
+                  "avatars/20-frameless-edge.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Frameless Dot": {
+                  "avatars/21-frameless-dot.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Frameless Square": {
+                  "avatars/22-frameless-square.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Frameless Only": {
+                  "avatars/23-frameless-only.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Rounded Edge": {
+                  "avatars/30-rounded-edge.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Rounded Dot": {
+                  "avatars/31-rounded-dot.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Rounded Square": {
+                  "avatars/32-rounded-square.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Rounded Only": {
+                  "avatars/33-rounded-only.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Round Edge": {
+                  "avatars/40-round-edge.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Round Dot": {
+                  "avatars/41-round-dot.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Round Square": {
+                  "avatars/42-round-square.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Round Only": {
+                  "avatars/43-round-only.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Just Dot": {
+                  "avatars/50-just-dot.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Just Square": {
+                  "avatars/51-just-square.css": [
+                    "QuickAccess"
+                  ]
+                },
+                "Nothing": {
+                  "avatars/60-nothing.css": [
+                    "QuickAccess"
+                  ]
+                }
+              },
+              "components": []
 		}
 	}
 }
