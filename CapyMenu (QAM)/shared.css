@@ -2,7 +2,6 @@
 CapyMenu QAM
 v2.0
 By Capybara/Kalyvara
-Avatar Customization Suite by Charmics
 --- */
 
 
@@ -15,7 +14,6 @@ Changelog
 
 - cleaner/more consistent UI overhaul (removed clutter, good amount of color corrections, new themed components)
 - removed Colored Toggles dependency to allow more flexbility as it themes extra UI components (e.g. Friends badge), customization for toggles and sliders is now limited to the QAM
-- implemented Avatar Customization Suite by Charmics (this theme originally injects its CSS into BPM only)
 - added an option to customize the vertical separator between tabs column and main panel
 - fixed custom colors not registering for label separators
 - additional bug fixes (most notable is buggy highlighted buttons in some menus, e.g. Decky plugins, Remote Play Together section)
