@@ -1,9 +1,9 @@
 {
-	"name": "CapyMenu (QAM)",
+	"name": "Testing: CapyMenu (QAM)",
 	"author": "Capybara",
 	"target": "Tweak",
 	"version": "v2.0",
-	"description": "A tool offering a plethora of options and presets to customize the appearence of the Quick Access Menu (QAM) (triggered by pressing the three dots button). This includes the possibility to set your own colors and gradients for backgrounds, texts, buttons, among other features. //// [v2.0 big update] UI is even cleaner with much less clutter and more color consistency ; removed SuchMeme's Colored Toggles dependency to allow more flexibility as it themes extra UI components (e.g. Friends badge), please note though that custom toggles and sliders through CapyMenu are still available but they are now only limited to the QAM ; implemented Charmics' Avatar Customization Suite for in-game view, full credits to them ; several bug fixes.",
+	"description": "A tool offering a plethora of options and presets to customize the appearence of the Quick Access Menu (QAM) (triggered by pressing the three dots button). This includes the possibility to set your own colors and gradients for backgrounds, texts, buttons, among other features. //// [v2.0 big update] UI is even cleaner with much less clutter and more color consistency ; removed SuchMeme's Colored Toggles dependency to allow more flexibility as it themes extra UI components (e.g. Friends badge), please note though that custom toggles and sliders through CapyMenu are still available but they are now only limited to the QAM ; more options and several bug fixes.",
 	"manifest_version": 6,
 	"inject": {
 		"shared.css": [
@@ -1463,113 +1463,6 @@
 					]
 				}
 			]
-		},
-        "[In-game] Charmics' Avatar Customization Suite": {
-			"type": "dropdown",
-			"default": "Default",
-			"values": {
-                "Default": {
-                  "avatars/00-default.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Normal Narrow": {
-                  "avatars/10-normal-narrow.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Normal Dot": {
-                  "avatars/11-normal-dot.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Normal Square": {
-                  "avatars/12-normal-square.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Normal Only": {
-                  "avatars/13-normal-only.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Frameless Edge": {
-                  "avatars/20-frameless-edge.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Frameless Dot": {
-                  "avatars/21-frameless-dot.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Frameless Square": {
-                  "avatars/22-frameless-square.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Frameless Only": {
-                  "avatars/23-frameless-only.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Rounded Edge": {
-                  "avatars/30-rounded-edge.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Rounded Dot": {
-                  "avatars/31-rounded-dot.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Rounded Square": {
-                  "avatars/32-rounded-square.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Rounded Only": {
-                  "avatars/33-rounded-only.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Round Edge": {
-                  "avatars/40-round-edge.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Round Dot": {
-                  "avatars/41-round-dot.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Round Square": {
-                  "avatars/42-round-square.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Round Only": {
-                  "avatars/43-round-only.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Just Dot": {
-                  "avatars/50-just-dot.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Just Square": {
-                  "avatars/51-just-square.css": [
-                    "QuickAccess"
-                  ]
-                },
-                "Nothing": {
-                  "avatars/60-nothing.css": [
-                    "QuickAccess"
-                  ]
-                }
-              },
-              "components": []
 		}
 	}
 }
