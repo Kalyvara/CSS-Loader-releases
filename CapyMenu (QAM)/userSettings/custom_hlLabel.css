@@ -1,5 +1,5 @@
 :root {
-    --capyQAM_hl_labelBg: linear-gradient(45deg, rgba(112, 255, 205, var(--capyQAM_hl_labelOpacity)), rgba(255, 171, 189, var(--capyQAM_hl_labelOpacity)), rgba(255, 249, 196, var(--capyQAM_hl_labelOpacity)));
+    --capyQAM_hl_labelBg: linear-gradient(45deg, var(--capyQAM_hl_labelGrad1), var(--capyQAM_hl_labelGrad2), var(--capyQAM_hl_labelGrad3));
 }
 
 .gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocus, 
@@ -8,10 +8,28 @@
     animation: none;
 }
 
+
+
 /* ---
-Friends section
-Same occurrence order as in friendsTab.css
+Notifications tab
 --- */
+
+
+
+/* Label, highlight */
+.standardtemplates_StandardTemplateContainer_1adpx.gpfocus {
+    background: var(--capyQAM_hl_labelBg);
+    animation: none;
+}
+
+
+
+/* ---
+Friends tab
+Same occurrence order as in friends.css
+--- */
+
+
 
 .friendsContainer .friend.gpfocus.gpfocuswithin,
 .groupHeaderContainer.gpfocuswithin .groupName.gpfocus.gpfocuswithin {
@@ -47,5 +65,10 @@ Same occurrence order as in friendsTab.css
 
 /* Friends status notification container, highlight */
 .notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin {
+    background: var(--capyQAM_hl_labelBg) !important;
+}
+
+/* Unread message label, highlight */
+.unreadFriend .friend.gpfocus.gpfocuswithin {
     background: var(--capyQAM_hl_labelBg) !important;
 }
