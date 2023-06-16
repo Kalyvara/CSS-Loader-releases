@@ -80,7 +80,7 @@ General appearence
     background: rgba(var(--capyQAM_separatorColor), var(--capyQAM_separatorOpacity));
 }
 .quickaccesscontrols_QuickAccessNotifications_2HCcx>div:not(:focus)+div:not(:focus):before /* within Notifications */ {
-    border-bottom: 1px solid rgba(var(--capyQAM_separatorColor), var(--capyQAM_separatorOpacity));
+    border-bottom: 1px solid var(--capyQAM_separatorColor);
 }
 
 /* Label in main panel */
