@@ -2,6 +2,16 @@
 
 ## Changelog
 
+### v2.1
+
+- fixed broken UI components from latest Steam client update (e.g. Notifications), probably not all components as I can't exactly do thorough testing
+- fixed custom gradient wrongly registering for header and footer
+- removed additional space between tabs option
+- minor tweaking
+
+- re-organized folder tree
+- re-organized CSS code
+
 ### v2.0
 
 - **cleaner/more consistent UI overhaul** (removed clutter, good amount of color corrections, new themed components)
