@@ -109,22 +109,7 @@ Notification containers (items/labels)
     text-shadow: .5px .5px 0px rgba(0, 0, 0, 0.6);
 }
 
-/* Achievement, name, regular */
-.notificationcontent_AchievementTextSection_mJ3Nu .notificationcontent_Name_1juF1 {
-    color: var(--capyQAM_mainTextColor) !important;
-}
-/* Achievement, description, regular */
-.BasicUI .notificationcontent_AchievementTextSection_mJ3Nu .notificationcontent_Desc_2zm3G {
-    color: var(--capyQAM_mainTextColor) !important;
-}
 
-.standardtemplates_StandardTemplateContainer_1adpx.gpfocus.gpfocuswithin .notificationcontent_AchievementTextSection_mJ3Nu .notificationcontent_Name_1juF1 {
-    color: var(--capyQAM_hl_mainTextColor) !important;
-}
-
-.standardtemplates_StandardTemplateContainer_1adpx.gpfocus.gpfocuswithin .notificationcontent_AchievementTextSection_mJ3Nu .notificationcontent_Desc_2zm3G {
-    color: var(--capyQAM_hl_mainTextColor) !important;
-}
 
 /* ------------------------------------------ */
 /* ------------------------------------------ */
@@ -142,4 +127,26 @@ Some (if not all) CSS classes below may be deprecated due to latest Steam client
 .notificationcontent_StandardTemplate_5HZT7.gpfocus, .notificationcontent_PinnedTemplate_1X-O1.gpfocus {
     background: rgba(var(--capyQAM_hl_labelBg), var(--capyQAM_hl_labelOpacity));
     animation: none;
+}
+
+/* Achievements */
+.appdetailsachievementssection_Featured_1j_gj .appdetailsachievementssection_TextSection_1s_9c .appdetailsachievementssection_Name_39Y01 {
+    color: var(--capyQAM_mainTextColor);
+}
+.notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .appdetailsachievementssection_Featured_1j_gj .appdetailsachievementssection_TextSection_1s_9c .appdetailsachievementssection_Name_39Y01 {
+    color: var(--capyQAM_mainTextColor);
+}
+.quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications .notificationcontent_StandardTemplate_5HZT7 .notificationcontent_AchievementBody_2iHCs .appdetailsachievementssection_Achieved_MGoYU .appdetailsachievementssection_TextSection_1s_9c /* achievement title, no highlight */ {
+    color: var(--capyQAM_mainTextColor);
+}
+.quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications .notificationcontent_StandardTemplate_5HZT7 .notificationcontent_AchievementBody_2iHCs .appdetailsachievementssection_Achieved_MGoYU .appdetailsachievementssection_Desc_2gLHb /* achievement description, no highlight */ {
+    color: var(--capyQAM_mainTextColor);
+    filter: opacity(0.6);
+}
+.quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications.gpfocuswithin .notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .notificationcontent_AchievementBody_2iHCs .appdetailsachievementssection_Achieved_MGoYU .appdetailsachievementssection_TextSection_1s_9c /* achievement title, highlight */ {
+    color: var(--capyQAM_hl_mainTextColor);
+}
+.quickaccessmenu_TabGroupPanel_1QO7b.tab_Notifications.gpfocuswithin .notificationcontent_StandardTemplate_5HZT7.gpfocus.gpfocuswithin .notificationcontent_AchievementBody_2iHCs .appdetailsachievementssection_Achieved_MGoYU .appdetailsachievementssection_Desc_2gLHb /* achievement description, highlight */ {
+    color: var(--capyQAM_hl_mainTextColor);
+    filter: opacity(0.6);
 }
