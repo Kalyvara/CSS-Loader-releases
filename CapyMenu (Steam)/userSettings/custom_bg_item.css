@@ -53,6 +53,11 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active {
     background: var(--capySteam_bgHighlightColor) !important;
 }
 
+/* Text field, selected */
+.gamepaddialog_BasicTextInput_3GCBi.gpfocus, .gamepaddialog_BasicTextInput_3GCBi.gpfocus:hover {
+    background: var(--capySteam_bgHighlightColor);
+}
+
 
 
 /* ---
