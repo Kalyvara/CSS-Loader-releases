@@ -1,9 +1,0 @@
-:root {
-    --markColor: linear-gradient(180deg, var(--gradientMarkColor1), var(--gradientMarkColor2), var(--gradientMarkColor3)) !important;
-    --markAnim: gradient 20s ease infinite forwards !important;
-}
-
-.mainmenu_Item_2w9Tp .mainmenu_ActiveDot_1uLVH {
-    background: var(--markColor) !important;
-    animation: var(--markAnim);
-}

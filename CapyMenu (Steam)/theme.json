@@ -2,138 +2,207 @@
 	"name": "CapyMenu (Steam Menu)",
 	"author": "Capybara",
 	"target": "Tweak",
-	"version": "v1.0",
+	"version": "v2.0",
 	"description": "Offers a variety of options and presets to customize the main menu's appearence (triggered by pressing the STEAM button). This includes the possibility to make your own colors and gradients, disabling icons, sliders for backgrounds transparency, among other features.",
 	"manifest_version": 6,
 	"inject": {
-		"shared.css": [
+		"common.css": [
+			"MainMenu"
+		],
+		"controller.css": [
+			"MainMenu"
+		],
+		"achievements.css": [
+			"MainMenu"
+		],
+		"guides.css": [
+			"MainMenu"
+		],
+		"notes.css": [
 			"MainMenu"
 		]
 	},
 	"dependencies": {},
 	"patches": {
-		"Remove focus animation": {
-            "type": "checkbox",
-			"default": "No",
+		"Display icons": {
+			"type": "checkbox",
+			"default": "Yes",
 			"values": {
-                "No": {},
-                "Yes": {
-                    "focus_remove.css": ["MainMenu"]
-                }
-            }
-        },
-		"Background menu transparency": {
-            "type": "slider",
-			"default": "0.8",
-            "values": {
-				"O": {
-				  "--bgOpacity": [
-					"0",
-					"MainMenu"
-				  ]
-				},
-				"0.2": {
-				  "--bgOpacity": [
-					"0.2",
-					"MainMenu"
-				  ]
-				},
-				"0.4": {
-				  "--bgOpacity": [
-					"0.4",
-					"MainMenu"
-				  ]
-				},
-				"0.6": {
-					"--bgOpacity": [
-					  "0.6",
-					  "MainMenu"
-					]
-				  },
-				  "0.8": {
-					"--bgOpacity": [
-					  "0.8",
-					  "MainMenu"
-					]
-				  },
-				  "1": {
-					"--bgOpacity": [
-					  "1",
-					  "MainMenu"
-					]
-				  }
-			  }
-        },
-		"Background menu color": {
-			"type": "dropdown",
-			"default": "OLED black (solid) [default]",
-			"values": {
-				"OLED black (solid) [default]": {
-					"--colorTone": [
-					  "0, 0, 0",
-					  "MainMenu"
-					]
-				  },
-				  "Grayish black (solid)": {
-					"--colorTone": [
-					  "17, 17, 17",
-					  "MainMenu"
-					]
-				  },
-				  "White (solid)": {
-					"--colorTone": [
-					  "255, 255, 255",
-					  "MainMenu"
-					]
-				  },
-				  "Black fade out (gradient)": {
-					"presets/menuBackground/fadeout.css": [
-					  "MainMenu"
-					]
-				  },
-				  "Pastel (gradient)": {
-					"presets/menuBackground/pastel.css": [
-					  "MainMenu"
-					]
-				  },
-				  "Carbon (gradient)": {
-					"presets/menuBackground/carbon.css": [
-					  "MainMenu"
-					]
-				  },
-				  "Gold (gradient)": {
-					"presets/menuBackground/gold.css": [
-					  "MainMenu"
-					]
-				  },
-				  "Crimson (gradient)": {
-					"presets/menuBackground/crimson.css": [
-					  "MainMenu"
-					]
-				  },
-				  "Royal blue (gradient)": {
-					"presets/menuBackground/royal_blue.css": [
-					  "MainMenu"
-					]
-				  },
-				  "Bottle green (gradient)": {
-					"presets/menuBackground/bottle_green.css": [
-					  "MainMenu"
-					]
-				  },
-				  "⚙️ Custom... (disables transparency slider)": {
-					"custom_bg_gradient.css": [
+				"No": {
+					"features/disable_icons.css": [
 						"MainMenu"
 					]
-				  }
 				},
+				"Yes": {}
+			}
+		},
+		"Display tab marker": {
+			"type": "checkbox",
+			"default": "Yes",
+			"values": {
+				"No": {
+					"features/disable_mark.css": [
+						"MainMenu"
+					]
+				},
+				"Yes": {}
+			}
+		},
+		"Dot marker": {
+			"type": "checkbox",
+			"default": "No",
+			"values": {
+				"No": {},
+				"Yes": {
+					"features/dot_mark.css": [
+						"MainMenu"
+					]
+				}
+			}
+		},
+		"Remove focus animation": {
+			"type": "checkbox",
+			"default": "No",
+			"values": {
+				"No": {},
+				"Yes": {
+					"features/focus_remove.css": [
+						"MainMenu"
+					]
+				}
+			}
+		},
+		"Panel opacity": {
+			"type": "slider",
+			"default": "0.8",
+			"values": {
+				"0": {
+					"--capySteam_mainBgOpacity": [
+						"0",
+						"MainMenu"
+					]
+				},
+				"0.1": {
+					"--capySteam_mainBgOpacity": [
+						"0.1",
+						"MainMenu"
+					]
+				},
+				"0.2": {
+					"--capySteam_mainBgOpacity": [
+						"0.2",
+						"MainMenu"
+					]
+				},
+				"0.3": {
+					"--capySteam_mainBgOpacity": [
+						"0.3",
+						"MainMenu"
+					]
+				},
+				"0.4": {
+					"--capySteam_mainBgOpacity": [
+						"0.4",
+						"MainMenu"
+					]
+				},
+				"0.5": {
+					"--capySteam_mainBgOpacity": [
+						"0.5",
+						"MainMenu"
+					]
+				},
+				"0.6": {
+					"--capySteam_mainBgOpacity": [
+						"0.6",
+						"MainMenu"
+					]
+				},
+				"0.7": {
+					"--capySteam_mainBgOpacity": [
+						"0.7",
+						"MainMenu"
+					]
+				},
+				"0.8": {
+					"--capySteam_mainBgOpacity": [
+						"0.8",
+						"MainMenu"
+					]
+				},
+				"0.9": {
+					"--capySteam_mainBgOpacity": [
+						"0.9",
+						"MainMenu"
+					]
+				},
+				"1": {
+					"--capySteam_mainBgOpacity": [
+						"1",
+						"MainMenu"
+					]
+				}
+			}
+		},
+		"Panel color": {
+			"type": "dropdown",
+			"default": "[default] OLED black",
+			"values": {
+				"[default] OLED black": {
+					"--capySteam_mainBgColor": [
+						"0, 0, 0",
+						"MainMenu"
+					]
+				},
+				"Grayish black": {
+					"--capySteam_mainBgColor": [
+						"17, 17, 17",
+						"MainMenu"
+					]
+				},
+				"White": {
+					"--capySteam_mainBgColor": [
+						"255, 255, 255",
+						"MainMenu"
+					]
+				},
+				"Crimson red": {
+					"--capySteam_mainBgColor": [
+						"125, 15, 33",
+						"MainMenu"
+					]
+				},
+				"Teal": {
+					"--capySteam_mainBgColor": [
+						"30, 156, 158",
+						"MainMenu"
+					]
+				},
+				"Leaf green": {
+					"--capySteam_mainBgColor": [
+						"75, 191, 92",
+						"MainMenu"
+					]
+				},
+				"Beige": {
+					"--capySteam_mainBgColor": [
+						"197, 199, 149",
+						"MainMenu"
+					]
+				},
+				"⚙️ Gradient... (disables transparency slider)": {
+					"userSettings/custom_bg_main.css": [
+						"MainMenu"
+					]
+				}
+			},
 			"components": [
 				{
 					"name": "Gradient color 1",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Gradient... (disables transparency slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "gradientColor1",
+					"css_variable": "capySteam_mainGrad1",
 					"tabs": [
 						"MainMenu"
 					]
@@ -141,9 +210,9 @@
 				{
 					"name": "Gradient color 2",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Gradient... (disables transparency slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "gradientColor2",
+					"css_variable": "capySteam_mainGrad2",
 					"tabs": [
 						"MainMenu"
 					]
@@ -151,84 +220,146 @@
 				{
 					"name": "Gradient color 3",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Gradient... (disables transparency slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "gradientColor3",
+					"css_variable": "capySteam_mainGrad3",
 					"tabs": [
 						"MainMenu"
 					]
 				}
 			]
 		},
-		"Focused item background transparency": {
-            "type": "slider",
+		"Selected item, background opacity": {
+			"type": "slider",
 			"default": "0.8",
-            "values": {
-				"O": {
-				  "--bgItemOpacity": [
-					"0",
-					"MainMenu"
-				  ]
-				},
-				"0.4": {
-				  "--bgItemOpacity": [
-					"0.4",
-					"MainMenu"
-				  ]
-				},
-				  "0.8": {
-					"--bgItemOpacity": [
-					  "0.8",
-					  "MainMenu"
-					]
-				  },
-				  "1": {
-					"--bgItemOpacity": [
-					  "1",
-					  "MainMenu"
-					]
-				  }
-			  }
-        },
-		"Focused item background color": {
-			"type": "dropdown",
-			"default": "White (solid) [default]",
 			"values": {
-				"White (solid) [default]": {
-					"--bgItemFocus": [
-					  "255, 255, 255",
-					  "MainMenu"
-					]
-				  },
-				  "Black (solid)": {
-					"--bgItemFocus": [
-					  "0, 0, 0",
-					  "MainMenu"
-					]
-				  },
-				  "White fade out (gradient)": {
-					"presets/focusedItemBackground/fadeout.css": [
-					  "MainMenu"
-					]
-				  },
-				  "Pastel (gradient)": {
-					"presets/focusedItemBackground/pastel_item.css": [
-					  "MainMenu"
-					]
-				  },
-				  "⚙️ Custom... (disables transparency slider)": {
-					"custom_bg_gradient_item.css": [
+				"0": {
+					"--capySteam_bgHighlightOpacity": [
+						"0",
 						"MainMenu"
 					]
-				  }
 				},
+				"0.1": {
+					"--capySteam_bgHighlightOpacity": [
+						"0.1",
+						"MainMenu"
+					]
+				},
+				"0.2": {
+					"--capySteam_bgHighlightOpacity": [
+						"0.2",
+						"MainMenu"
+					]
+				},
+				"0.3": {
+					"--capySteam_bgHighlightOpacity": [
+						"0.3",
+						"MainMenu"
+					]
+				},
+				"0.4": {
+					"--capySteam_bgHighlightOpacity": [
+						"0.4",
+						"MainMenu"
+					]
+				},
+				"0.5": {
+					"--capySteam_bgHighlightOpacity": [
+						"0.5",
+						"MainMenu"
+					]
+				},
+				"0.6": {
+					"--capySteam_bgHighlightOpacity": [
+						"0.6",
+						"MainMenu"
+					]
+				},
+				"0.7": {
+					"--capySteam_bgHighlightOpacity": [
+						"0.7",
+						"MainMenu"
+					]
+				},
+				"0.8": {
+					"--capySteam_bgHighlightOpacity": [
+						"0.8",
+						"MainMenu"
+					]
+				},
+				"0.9": {
+					"--capySteam_bgHighlightOpacity": [
+						"0.9",
+						"MainMenu"
+					]
+				},
+				"1": {
+					"--capySteam_bgHighlightOpacity": [
+						"1",
+						"MainMenu"
+					]
+				}
+			}
+		},
+		"Selected item, background color": {
+			"type": "dropdown",
+			"default": "[default] White",
+			"values": {
+				"OLED black": {
+					"--capySteam_bgHighlightColor": [
+						"0, 0, 0",
+						"MainMenu"
+					]
+				},
+				"Grayish black": {
+					"--capySteam_bgHighlightColor": [
+						"17, 17, 17",
+						"MainMenu"
+					]
+				},
+				"[default] White": {
+					"--capySteam_bgHighlightColor": [
+						"255, 255, 255",
+						"MainMenu"
+					]
+				},
+				"Crimson red": {
+					"--capySteam_bgHighlightColor": [
+						"125, 15, 33",
+						"MainMenu"
+					]
+				},
+				"Teal": {
+					"--capySteam_bgHighlightColor": [
+						"30, 156, 158",
+						"MainMenu"
+					]
+				},
+				"Leaf green": {
+					"--capySteam_bgHighlightColor": [
+						"75, 191, 92",
+						"MainMenu"
+					]
+				},
+				"Beige": {
+					"--capySteam_bgHighlightColor": [
+						"197, 199, 149",
+						"MainMenu"
+					]
+				},
+				"⚙️ Gradient... (disables transparency slider)": {
+					"userSettings/custom_bg_item.css": [
+						"MainMenu"
+					]
+				}
+			},
 			"components": [
 				{
 					"name": "Gradient color 1",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Gradient... (disables transparency slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "gradientItemColor1",
+					"css_variable": "capySteam_itemGrad1",
 					"tabs": [
 						"MainMenu"
 					]
@@ -236,9 +367,9 @@
 				{
 					"name": "Gradient color 2",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Gradient... (disables transparency slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "gradientItemColor2",
+					"css_variable": "capySteam_itemGrad2",
 					"tabs": [
 						"MainMenu"
 					]
@@ -246,9 +377,9 @@
 				{
 					"name": "Gradient color 3",
 					"type": "color-picker",
-					"on": "⚙️ Custom... (disables transparency slider)",
+					"on": "⚙️ Gradient... (disables transparency slider)",
 					"default": "#34e8ebFF",
-					"css_variable": "gradientItemColor3",
+					"css_variable": "capySteam_itemGrad3",
 					"tabs": [
 						"MainMenu"
 					]
@@ -257,218 +388,388 @@
 		},
 		"Text color": {
 			"type": "dropdown",
-			"default": "White [default]",
+			"default": "[default] White",
 			"values": {
-				"White [default]": {
-					"--textColor": [
+				"OLED black": {
+					"--capySteam_mainTextColor": [
+						"#000",
+						"MainMenu"
+					]
+				},
+				"Grayish black": {
+					"--capySteam_mainTextColor": [
+						"#111",
+						"MainMenu"
+					]
+				},
+				"[default] White": {
+					"--capySteam_mainTextColor": [
 						"#fff",
 						"MainMenu"
-					  ]
+					]
 				},
-				"Black": {
-					"--textColor": [
-					  "#000",
-					  "MainMenu"
+				"Crimson red": {
+					"--capySteam_mainTextColor": [
+						"#7d0f21",
+						"MainMenu"
+					]
+				},
+				"Teal": {
+					"--capySteam_mainTextColor": [
+						"#1e9c9e",
+						"MainMenu"
+					]
+				},
+				"Leaf green": {
+					"--capySteam_mainTextColor": [
+						"#4bbf5c",
+						"MainMenu"
+					]
+				},
+				"Beige": {
+					"--capySteam_mainTextColor": [
+						"#c5c795",
+						"MainMenu"
 					]
 				},
 				"⚙️ Custom...": {}
-				},
+			},
 			"components": [
 				{
 					"name": "Text color",
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "textColor",
+					"css_variable": "capySteam_mainTextColor",
 					"tabs": [
 						"MainMenu"
 					]
 				}
 			]
 		},
-		"Focused text color": {
-		"type": "dropdown",
-		"default": "White [default]",
-		"values": {
-			"White [default]": {
-				"--txtItemFocus": [
-					"#fff",
-					"MainMenu"
-				  ]
-			},
-			"Black": {
-				"--txtItemFocus": [
-				  "#000",
-				  "MainMenu"
-				]
-			},
-			"⚙️ Custom...": {}
-			},
-		"components": [
-			{
-				"name": "Focused text color",
-				"type": "color-picker",
-				"on": "⚙️ Custom...",
-				"default": "#34e8ebFF",
-				"css_variable": "txtItemFocus",
-				"tabs": [
-					"MainMenu"
-				]
-			}
-		]
-		},
-		"Display icons": {
-            "type": "checkbox",
-			"default": "Yes",
-			"values": {
-                "No": {
-					"disable_icons.css": ["MainMenu"]
-				},
-                "Yes": {}
-            }
-        },
-		"Icon color": {
+		"Text color, highlight": {
 			"type": "dropdown",
-			"default": "White [default]",
+			"default": "[default] Grayish black",
 			"values": {
-				"White [default]": {
-					"--iconColor": [
-						"#fff",
+				"OLED black": {
+					"--capySteam_hl_mainTextColor": [
+						"#000",
 						"MainMenu"
-					  ]
-				},
-				"Black": {
-					"--iconColor": [
-					  "#000",
-					  "MainMenu"
 					]
 				},
-				"⚙️ Custom...": {
-				}
+				"[default] Grayish black": {
+					"--capySteam_hl_mainTextColor": [
+						"#111",
+						"MainMenu"
+					]
 				},
+				"White": {
+					"--capySteam_hl_mainTextColor": [
+						"#fff",
+						"MainMenu"
+					]
+				},
+				"Crimson red": {
+					"--capySteam_hl_mainTextColor": [
+						"#7d0f21",
+						"MainMenu"
+					]
+				},
+				"Teal": {
+					"--capySteam_hl_mainTextColor": [
+						"#1e9c9e",
+						"MainMenu"
+					]
+				},
+				"Leaf green": {
+					"--capySteam_hl_mainTextColor": [
+						"#4bbf5c",
+						"MainMenu"
+					]
+				},
+				"Beige": {
+					"--capySteam_hl_mainTextColor": [
+						"#c5c795",
+						"MainMenu"
+					]
+				},
+				"⚙️ Custom...": {}
+			},
+			"components": [
+				{
+					"name": "Focused text color",
+					"type": "color-picker",
+					"on": "⚙️ Custom...",
+					"default": "#34e8ebFF",
+					"css_variable": "capySteam_hl_mainTextColor",
+					"tabs": [
+						"MainMenu"
+					]
+				}
+			]
+		},
+		"Icon color": {
+			"type": "dropdown",
+			"default": "[default] White",
+			"values": {
+				"OLED black": {
+					"--capySteam_iconColor": [
+						"#000",
+						"MainMenu"
+					]
+				},
+				"Grayish black": {
+					"--capySteam_iconColor": [
+						"#111",
+						"MainMenu"
+					]
+				},
+				"[default] White": {
+					"--capySteam_iconColor": [
+						"#fff",
+						"MainMenu"
+					]
+				},
+				"Crimson red": {
+					"--capySteam_iconColor": [
+						"#7d0f21",
+						"MainMenu"
+					]
+				},
+				"Teal": {
+					"--capySteam_iconColor": [
+						"#1e9c9e",
+						"MainMenu"
+					]
+				},
+				"Leaf green": {
+					"--capySteam_iconColor": [
+						"#4bbf5c",
+						"MainMenu"
+					]
+				},
+				"Beige": {
+					"--capySteam_iconColor": [
+						"#c5c795",
+						"MainMenu"
+					]
+				},
+				"⚙️ Custom...": {}
+			},
 			"components": [
 				{
 					"name": "Icon color",
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "iconColor",
+					"css_variable": "capySteam_iconColor",
 					"tabs": [
 						"MainMenu"
 					]
 				}
 			]
 		},
-		"Focused icon color": {
+		"Icon color, selected": {
 			"type": "dropdown",
-			"default": "White [default]",
+			"default": "[default] Grayish black",
 			"values": {
-				"White [default]": {
-					"--iconColorFocus": [
-					  "#fff",
-					  "MainMenu"
+				"OLED black": {
+					"--capySteam_hl_iconColor": [
+						"#000",
+						"MainMenu"
 					]
-				  },
-				  "Black": {
-					"--iconColorFocus": [
-					  "#000",
-					  "MainMenu"
-					]
-				  },
-				  "⚙️ Custom...": {
-				  }
 				},
+				"[default] Grayish black": {
+					"--capySteam_hl_iconColor": [
+						"#111",
+						"MainMenu"
+					]
+				},
+				"White": {
+					"--capySteam_hl_iconColor": [
+						"#fff",
+						"MainMenu"
+					]
+				},
+				"Crimson red": {
+					"--capySteam_hl_iconColor": [
+						"#7d0f21",
+						"MainMenu"
+					]
+				},
+				"Teal": {
+					"--capySteam_hl_iconColor": [
+						"#1e9c9e",
+						"MainMenu"
+					]
+				},
+				"Leaf green": {
+					"--capySteam_hl_iconColor": [
+						"#4bbf5c",
+						"MainMenu"
+					]
+				},
+				"Beige": {
+					"--capySteam_hl_iconColor": [
+						"#c5c795",
+						"MainMenu"
+					]
+				},
+				"⚙️ Custom...": {}
+			},
 			"components": [
 				{
 					"name": "Focused icon color",
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "iconColorFocus",
+					"css_variable": "capySteam_hl_iconColor",
 					"tabs": [
 						"MainMenu"
 					]
 				}
 			]
 		},
-		"Display active tab mark": {
-            "type": "checkbox",
-			"default": "Yes",
-			"values": {
-                "No": {
-					"disable_mark.css": ["MainMenu"]
-				},
-                "Yes": {
-                }
-            }
-        },
-		"Tab mark margin": {
-            "type": "checkbox",
-			"default": "No",
-			"values": {
-                "No": {},
-                "Yes": {
-                    "mark_margin.css": ["MainMenu"]
-                }
-            }
-        },
-		"Dot mark": {
-            "type": "checkbox",
-			"default": "No",
-			"values": {
-                "No": {},
-                "Yes": {
-                    "dot_mark.css": ["MainMenu"]
-                }
-            }
-        },
-		"Tab mark color": {
+		"Marker color": {
 			"type": "dropdown",
-			"default": "White [default]",
+			"default": "[default] Grayish black",
 			"values": {
-				"White [default]": {
-					"--activeColor": [
+				"OLED black": {
+					"--capySteam_markerColor": [
+						"0, 0, 0",
+						"MainMenu"
+					]
+				},
+				"[default] Grayish black": {
+					"--capySteam_markerColor": [
+						"17, 17, 17",
+						"MainMenu"
+					]
+				},
+				"White": {
+					"--capySteam_markerColor": [
 						"255, 255, 255",
 						"MainMenu"
-					  ]
-				},
-				"Black": {
-					"--activeColor": [
-					  "0, 0, 0",
-					  "MainMenu"
 					]
 				},
-				"⚙️ Custom...": {
-					"custom_active_mark.css": ["MainMenu"]
-				}
+				"Crimson red": {
+					"--capySteam_markerColor": [
+						"125, 15, 33",
+						"MainMenu"
+					]
 				},
+				"Teal": {
+					"--capySteam_markerColor": [
+						"30, 156, 158",
+						"MainMenu"
+					]
+				},
+				"Leaf green": {
+					"--capySteam_markerColor": [
+						"75, 191, 92",
+						"MainMenu"
+					]
+				},
+				"Beige": {
+					"--capySteam_markerColor": [
+						"197, 199, 149",
+						"MainMenu"
+					]
+				},
+				"⚙️ Gradient...": {
+					"userSettings/custom_active_mark.css": [
+						"MainMenu"
+					]
+				}
+			},
 			"components": [
 				{
-					"name": "Tab mark color 1",
+					"name": "Marker color 1",
 					"type": "color-picker",
-					"on": "⚙️ Custom...",
+					"on": "⚙️ Gradient...",
 					"default": "#34e8ebFF",
-					"css_variable": "gradientMarkColor1",
+					"css_variable": "capySteam_markerGrad1",
 					"tabs": [
 						"MainMenu"
 					]
 				},
 				{
-					"name": "Tab mark color 2",
+					"name": "Marker color 2",
 					"type": "color-picker",
-					"on": "⚙️ Custom...",
+					"on": "⚙️ Gradient...",
 					"default": "#34e8ebFF",
-					"css_variable": "gradientMarkColor2",
+					"css_variable": "capySteam_markerGrad2",
 					"tabs": [
 						"MainMenu"
 					]
 				},
 				{
-					"name": "Tab mark color 3",
+					"name": "Marker color 3",
+					"type": "color-picker",
+					"on": "⚙️ Gradient...",
+					"default": "#34e8ebFF",
+					"css_variable": "capySteam_markerGrad3",
+					"tabs": [
+						"MainMenu"
+					]
+				}
+			]
+		},
+		"Progress bar color": {
+			"type": "dropdown",
+			"default": "[default] White",
+			"values": {
+				"OLED black": {
+					"--capySteam_progressBarColor": [
+						"#000",
+						"MainMenu"
+					]
+				},
+				"Grayish black": {
+					"--capySteam_progressBarColor": [
+						"#111",
+						"MainMenu"
+					]
+				},
+				"[default] White": {
+					"--capySteam_progressBarColor": [
+						"#fff",
+						"MainMenu"
+					]
+				},
+				"Crimson red": {
+					"--capySteam_progressBarColor": [
+						"#7d0f21",
+						"MainMenu"
+					]
+				},
+				"Teal": {
+					"--capySteam_progressBarColor": [
+						"#1e9c9e",
+						"MainMenu"
+					]
+				},
+				"Leaf green": {
+					"--capySteam_progressBarColor": [
+						"#4bbf5c",
+						"MainMenu"
+					]
+				},
+				"Beige": {
+					"--capySteam_progressBarColor": [
+						"#c5c795",
+						"MainMenu"
+					]
+				},
+				"⚙️ Custom...": {}
+			},
+			"components": [
+				{
+					"name": "Progress bar color",
 					"type": "color-picker",
 					"on": "⚙️ Custom...",
 					"default": "#34e8ebFF",
-					"css_variable": "gradientMarkColor3",
+					"css_variable": "capySteam_progressBarColor",
 					"tabs": [
 						"MainMenu"
 					]

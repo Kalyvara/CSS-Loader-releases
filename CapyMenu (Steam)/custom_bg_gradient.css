@@ -1,7 +1,0 @@
-:root {
-    --colorTone: linear-gradient(180deg, var(--gradientColor1), var(--gradientColor2), var(--gradientColor3)) !important;
-}
-
-.mainmenu_Menu_23IDi {
-    background: var(--colorTone) !important;
-}

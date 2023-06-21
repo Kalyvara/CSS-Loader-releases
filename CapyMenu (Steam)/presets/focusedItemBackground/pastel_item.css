@@ -1,7 +1,0 @@
-:root {
-    --bgItemFocus: linear-gradient(90deg, rgba(112, 255, 205, var(--bgItemOpacity)), rgba(255, 171, 189, var(--bgItemOpacity)), rgba(255, 249, 196, var(--bgItemOpacity))) !important;
-}
-
-.mainmenu_Item_2w9Tp.gpfocus {
-    background: var(--bgItemFocus) !important;
-  }
