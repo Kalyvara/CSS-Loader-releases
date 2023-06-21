@@ -47,6 +47,11 @@ Achievements
   color: var(--capySteam_mainTextColor);
 }
 
+/* e.g. Locked Achievements text */
+.achievementslist_ListTitle_IM0uE {
+  color: var(--capySteam_mainTextColor);
+}
+
 /* Achievement list */
 .achievementslist_AchievementList_1UXC2 {
   background: none;
@@ -58,6 +63,14 @@ Achievements
 }
 .achievementslist_AchievementListItemBase_2Kmn7 .achievementslist_Container_cvw8D {
     background: rgb(var(--capySteam_mainBgColor));
+}
+
+/* Achievement item, selected */
+.achievementslist_AchievementListItemBase_2Kmn7.gpfocus.gpfocuswithin .achievementslist_Container_cvw8D {
+    background: rgb(var(--capySteam_bgHighlightColor));
+}
+.achievementslist_GlobalAchievementListItem_316Uo.gpfocus.gpfocuswithin {
+    background: rgb(var(--capySteam_bgHighlightColor));
 }
 
 /* Achievement content */

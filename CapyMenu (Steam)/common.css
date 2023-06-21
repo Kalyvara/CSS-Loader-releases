@@ -65,7 +65,7 @@ Animations
 
 /* Text field, selected */
 .gamepaddialog_BasicTextInput_3GCBi.gpfocus, .gamepaddialog_BasicTextInput_3GCBi.gpfocus:hover {
-  background: none;
+  background: rgb(var(--capySteam_bgHighlightColor));
   border-bottom: 2px solid var(--capySteam_hl_mainTextColor);
 }
 .gamepaddialog_BasicTextInput_3GCBi.gpfocus::placeholder, .gamepaddialog_BasicTextInput_3GCBi.gpfocus:hover::placeholder {

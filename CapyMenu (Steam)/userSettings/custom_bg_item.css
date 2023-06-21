@@ -53,7 +53,15 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active {
     background: var(--capySteam_bgHighlightColor) !important;
 }
 
-/* Achievement content, selected */
+
+
+/* ---
+Achievements
+--- */
+
+
+
+/* Achievement item, selected */
 .achievementslist_AchievementListItemBase_2Kmn7.gpfocus.gpfocuswithin .achievementslist_Container_cvw8D {
     background: var(--capySteam_bgHighlightColor) !important;
 }
